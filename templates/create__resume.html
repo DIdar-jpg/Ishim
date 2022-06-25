@@ -1,34 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
    <link rel="stylesheet" href="../main.css">
    <title>Create Resume</title>
 </head>
+
 <body>
    <div class="container__main pad-0 w-1920">
-      <header class="header-wavy">
-         <div class="container__content header-wavy__inner">
-            <img src="../src/images/header/Ishim__logo.png" alt="" class="header__pic">
-            <div class="header__loc">
-               <form action="">
-                  <select name="interface__lang" id="">
-                     <option value="RU" class="header__loc__current">RU</option>
-                     <option value="TM" class="header__loc__current">TM</option>
-                  </select>
-               </form>
+      <header class="header">
+         <div class="container__content">
+            <div class="header__content">
+               <section class="header__sec__type3 ">
+                  <img src="../src/images/header/Ishim__logo.png" alt="" class="header__pic ">
+
+               </section>
+               <section class="header__sec__type3">
+                  <form action="">
+                     <div class="nav">
+                        <img src="../src/images/search__ic.svg" alt="Sorry">
+                        <input type="text" class="nav__inp" placeholder="Профессия, должность или ключевые слова">
+                        <input type="text" class="nav__inp__small" placeholder="Профессия">
+                     </div>
+                     <a href="">
+                        <img src="../src/images/nav__setting.png" alt="Sorry" class="nav__set__pic">
+                     </a>
+                  </form>
+               </section>
+
+               <section class="header__sec__type3">
+                  <a href="" class="header__user__pic">
+                     <img src="../src/images/user__def__ic.png" alt="Sorry">
+                  </a>
+                  <button class="hamburger hamburger-line">
+                     <span></span>
+                  </button>
+               </section>
             </div>
          </div>
       </header>
+      <div class="container__content">
+         <div class="nav__burger disappear">
+            <h1 class="nav__title">Меню</h1>
+
+            <a href="" class="nav__link">Каталог компаний</a>
+
+            <a href="" class="nav__link">Статьи</a>
+
+            <select name="interface__lang" onchange="window.location.href=this.options[this.selectedIndex].value"
+               class="nav__link">
+               <option selected disabled hidden class="header__loc__current">Язык</option>
+               <option value="" class="header__loc__current">RU</option>
+               <option value="" class="header__loc__current">TM</option>
+            </select>
+
+            <a href="" class="nav__link">История поиска</a>
+
+            <a href="" class="nav__link">Условия использования и политика конфиденциальности</a>
+
+            <a href="" class="nav__link">Связаться с нами</a>
+         </div>
+      </div>
 
 
-         <div class="reg-user-conf container__content">
+      <div class="reg-user-conf container__content">
          <div class="reg-user-conf__inner">
             <div class="reg-user-conf__content">
-               <h1 class="reg-user-conf__title">Создание регистрации</h1>
+               <h1 class="reg-user-conf__title">Создание резюме</h1>
 
                <form action="" class="reg-user-conf__form">
                   <div class="user-full-name">
@@ -36,15 +78,16 @@
                         <h2>Имя</h2>
                         <h2>Фамилия</h2>
                      </div>
-                     <input required type="text" class="user-name" value="" name="user__name">  
-                     
-                     <input required type="text" class="user-surname" value="" name="user__surname">        
+                     <input required type="text" class="user-name" value="" name="user__name">
+
+                     <input required type="text" class="user-surname" value="" name="user__surname">
                   </div>
 
                   <div class="user-birth-date">
                      <h2>Дата рождения</h2>
-                     <input required type="tel" class="user-bd__date user-bd__item" name="user-bd__date" value="" placeholder="03">    
-                     <select required name="user-bd__mon" id=""  class="user-bd__item user-select-bg">
+                     <input required type="tel" class="user-bd__date user-bd__item" name="user-bd__date" value=""
+                        placeholder="03">
+                     <select required name="user-bd__mon" id="" class="user-bd__item user-select-bg">
                         <option value="Jan">Январь</option>
                         <option value="Feb">Февраль</option>
                         <option selected value="">Март</option>
@@ -156,114 +199,116 @@
                   <div class="user-info-block">
                      <h2 class="fw500">Должность</h2>
                      <h3>Какую профессию вы ищете?</h3>
-                        <div class="user-inp-blok">
-                           <input required type="text" class="user-text" value="" placeholder="">
+                     <div class="user-inp-blok">
+                        <input required type="text" class="user-text" value="" placeholder="">
+                     </div>
+                  </div>
+
+                  <div class="user-info-block">
+                     <h2 class="fw500">Сфера деятельности</h2>
+                     <select required name="" id="" class="user-text user-select-bg">
+                        <option value="">SomeIndustry</option>
+                        <option value="">SomeIndustry</option>
+                        <option value="">SomeIndustry</option>
+                        <option value="">SomeIndustry</option>
+                        <option value="">Другое</option>
+                     </select>
+                  </div>
+
+                  <div class="user-info-block">
+                     <h2>Зарплата</h2>
+                     <div class="user-inp-blok-salary">
+                        <div class="user-inp-blok-salary__item">
+                           <span>от</span>
+                           <input type="text" class="user-text-w45" value="">
+                           <span>ман.</span>
+                        </div>
+                        <div class="user-inp-blok-salary__row"></div>
+                        <div class="user-inp-blok-salary__item">
+                           <span>до</span>
+                           <input type="text" class="user-text-w45" value="">
+                           <span>ман.</span>
                         </div>
                      </div>
+                  </div>
 
-                     <div class="user-info-block">
-                        <h2 class="fw500">Сфера деятельности</h2>
-                        <select required name="" id="" class="user-text user-select-bg">
-                           <option value="">SomeIndustry</option>
-                           <option value="">SomeIndustry</option>
-                           <option value="">SomeIndustry</option>
-                           <option value="">SomeIndustry</option>
-                           <option value="">Другое</option>
-                        </select>
+                  <div class="user-info-block">
+                     <h2 class="fw500">Занятость</h2>
+                     <div class="user__exp__block">
+                        <input required type="radio" id="empl1" value="empl1" name="user__employment">
+                        <label for="empl1" class="user__exp__item">полная занятость</label>
+
+                        <input required type="radio" id="empl2" value="empl2" name="user__employment">
+                        <label for="empl2" class="user__exp__item">проектная работа</label>
+
+                        <input required type="radio" id="empl3" value="empl3" name="user__employment">
+                        <label for="empl3" class="user__exp__item">частная занятость</label>
+
+                        <input required type="radio" id="empl4" value="empl4" name="user__employment">
+                        <label for="empl4" class="user__exp__item">стажировка</label>
                      </div>
-                     
-                     <div class="user-info-block">
-                        <h2>Зарплата</h2>
-                        <div class="user-inp-blok-salary">
-                           <div class="user-inp-blok-salary__item">
-                              <span>от</span>
-                              <input type="text" class="user-text-w45" value="">
-                              <span>ман.</span>
-                           </div>
-                           <div class="user-inp-blok-salary__row"></div>
-                           <div class="user-inp-blok-salary__item">
-                              <span>до</span>
-                              <input type="text" class="user-text-w45" value="">
-                              <span>ман.</span>
-                           </div>
-                        </div>
+                  </div>
+
+                  <div class="user-info-block">
+                     <h2 class="fw500">График работы</h2>
+                     <div class="user__exp__block">
+                        <input required type="radio" id="schedule1" value="schedule1" name="user__employment">
+                        <label for="schedule1" class="user__exp__item">полный рабочий день</label>
+
+                        <input required type="radio" id="schedule2" value="schedule2" name="user__employment">
+                        <label for="schedule2" class="user__exp__item">сменный график</label>
+
+                        <input required type="radio" id="schedule3" value="schedule3" name="user__employment">
+                        <label for="schedule3" class="user__exp__item">гибкий график</label>
+
+                        <input required type="radio" id="schedule4" value="schedule4" name="user__employment">
+                        <label for="schedule4" class="user__exp__item">удаленная работа</label>
                      </div>
-                     
-                     <div class="user-info-block">
-                        <h2 class="fw500">Занятость</h2>
-                        <div class="user__exp__block">
-                           <input required type="radio" id="empl1" value="empl1" name="user__employment">
-                           <label for="empl1" class="user__exp__item">полная занятость</label>
+                  </div>
 
-                           <input required type="radio" id="empl2" value="empl2" name="user__employment">
-                           <label for="empl2" class="user__exp__item">проектная работа</label>
 
-                           <input required type="radio" id="empl3" value="empl3" name="user__employment">
-                           <label for="empl3" class="user__exp__item">частная занятость</label>
+                  <div class="user-info-block">
+                     <h2>Опыт работы</h2>
+                     <div class="user__exp__block">
+                        <input required type="radio" id="exp2" value="exp2" name="user__exp">
+                        <label for="exp2" class="user__exp__item">нет опыта</label>
 
-                           <input required type="radio" id="empl4" value="empl4" name="user__employment">
-                           <label for="empl4" class="user__exp__item">стажировка</label> 
-                        </div>
+                        <input required type="radio" id="exp3" value="exp3" name="user__exp">
+                        <label for="exp3" class="user__exp__item">1 - 3 года</label>
+
+                        <input required type="radio" id="exp4" value="exp4" name="user__exp">
+                        <label for="exp4" class="user__exp__item">3 - 5 лет</label>
+
+                        <input required type="radio" id="exp5" value="exp6" name="user__exp">
+                        <label for="exp5" class="user__exp__item">более 6 лет</label>
                      </div>
+                  </div>
 
-                     <div class="user-info-block">
-                        <h2 class="fw500">График работы</h2>
-                        <div class="user__exp__block">
-                           <input required type="radio" id="schedule1" value="schedule1" name="user__employment">
-                           <label for="schedule1" class="user__exp__item">полный рабочий день</label>
+                  <div class="user-info-block">
+                     <h2>Какую должность вы занимали?</h2>
+                     <input type="text" class="user-text" value="" name="user__last__pos">
+                  </div>
 
-                           <input required type="radio" id="schedule2" value="schedule2" name="user__employment">
-                           <label for="schedule2" class="user__exp__item">сменный график</label>
+                  <div class="user-info-block">
+                     <h2>Как называлсь организация?</h2>
+                     <input type="text" class="user-text" value="" name="user__last__comp__name">
+                  </div>
 
-                           <input required type="radio" id="schedule3" value="schedule3" name="user__employment">
-                           <label for="schedule3" class="user__exp__item">гибкий график</label>
 
-                           <input required type="radio" id="schedule4" value="schedule4" name="user__employment">
-                           <label for="schedule4" class="user__exp__item">удаленная работа</label> 
-                        </div>
+                  <div class="user-info-block">
+                     <h2 class="fw500 user-info-block-title">Обязанности</h2>
+                     <div class="user__info__block__txt__area__wrapper">
+                        <textarea name="job__resp" id="" class="user-info-block-txtarea"
+                           placeholder="Расскажите обязанности и задачи которые вы выполняли на рабочем месте"></textarea>
                      </div>
+                  </div>
 
 
-                     <div class="user-info-block">
-                        <h2>Опыт работы</h2>
-                        <div class="user__exp__block">
-                           <input required type="radio" id="exp2" value="exp2" name="user__exp">
-                           <label for="exp2" class="user__exp__item">нет опыта</label>
-
-                           <input required type="radio" id="exp3" value="exp3" name="user__exp">
-                           <label for="exp3" class="user__exp__item">1 - 3 года</label>
-
-                           <input required type="radio" id="exp4" value="exp4" name="user__exp">
-                           <label for="exp4" class="user__exp__item">3 - 5 лет</label>
-
-                           <input required type="radio" id="exp5" value="exp6" name="user__exp">
-                           <label for="exp5" class="user__exp__item">более 6 лет</label>
-                        </div>
-                     </div>
-
-                     <div class="user-info-block">
-                        <h2>Какую должность вы занимали?</h2>
-                        <input type="text" class="user-text" value="" name="user__last__pos">
-                     </div>
-
-                     <div class="user-info-block">
-                        <h2>Как называлсь организация?</h2>
-                        <input type="text" class="user-text" value="" name="user__last__comp__name">
-                     </div>
-
-                                          
-                     <div class="user-info-block">
-                        <h2 class="fw500 user-info-block-title">Обязанности</h2>
-                        <div class="user__info__block__txt__area__wrapper">
-                           <textarea name="job__resp" id="" class="user-info-block-txtarea" placeholder="Расскажите обязанности и задачи которые вы выполняли на рабочем месте"></textarea>
-                        </div>
-                     </div>
-
-
-                     <div class="user-info-block">
+                  <div class="user-info-block" id="user__time__btn__wrap">
+                     <div class="user__time__wrapper" id="user__time__wrap">
                         <div class="user__time">
                            <h2>Начало работы</h2>
-                           <select name="user__time__start__mon" id=""  class="user__time__item user-select-bg">
+                           <select name="user__time__educ__start__mon" id="" class="user__time__item user-select-bg">
                               <option value="Jan">Январь</option>
                               <option value="Feb">Февраль</option>
                               <option selected value="">Март</option>
@@ -277,10 +322,10 @@
                               <option value="Nov">Ноябрь</option>
                               <option value="Dec">Декабрь</option>
                            </select>
-                           
+
                            <div class="horizontal__row"></div>
 
-                           <select name="user__time__start__year" id="" class="user__time__item user-select-bg">
+                           <select name="user__time__educ__start__year" id="" class="user__time__item user-select-bg">
                               <option value="2004">2004</option>
                               <option value="2003">2003</option>
                               <option selected value="2002">2002</option>
@@ -316,7 +361,7 @@
 
                         <div class="user__time">
                            <h2>Окончание работы</h2>
-                           <select name="user__time__end__mon" id=""  class="user__time__item user-select-bg">
+                           <select name="user__time__educ__end__mon" id="" class="user__time__item user-select-bg">
                               <option value="Jan">Январь</option>
                               <option value="Feb">Февраль</option>
                               <option selected value="">Март</option>
@@ -330,10 +375,10 @@
                               <option value="Nov">Ноябрь</option>
                               <option value="Dec">Декабрь</option>
                            </select>
-                           
+
                            <div class="horizontal__row"></div>
 
-                           <select name="user__time__end__year" id="" class="user__time__item user-select-bg">
+                           <select name="user__time__educ__end__year" id="" class="user__time__item user-select-bg">
                               <option value="2004">2004</option>
                               <option value="2003">2003</option>
                               <option selected value="2002">2002</option>
@@ -365,201 +410,222 @@
                               <option value="1976">1976</option>
                               <option value="1975">1975</option>
                            </select>
-                        </div>
-                        <div class="user__time__checkbox__wrapper">
-                           <input type="checkbox" class="user__time__checkbox" id="user__t__chk" name="user__time__checkbox">
-                           <label for="user__t__chk" class="user__time__checkbox__label">Работаю по настоящее время</label>
-                        </div>
-                        <div class="add__lang">
-                           <span>+</span>
-                           <span>Добавить опыт работы</span>
-                        </div>
-                     </div>
-                     <div class="user-info-block">
-                        <h2 class="fw500">Образование</h2>
-                        <div class="user__exp__block">
-                           <input required type="radio" id="educ1" value="educ1" name="user__edu">
-                           <label for="educ1" class="user__exp__item">среднее</label>
-                           <input required type="radio" id="educ2" value="educ2" name="user__edu">
-                           <label for="educ2" class="user__exp__item">средне-специальное</label>
-                           <input required type="radio" id="educ3" value="educ3" name="user__edu">
-                           <label for="educ3" class="user__exp__item">неоконченное высшее</label>
-                           <input required type="radio" id="educ4" value="educ4" name="user__edu">
-                           <label for="educ4" class="user__exp__item">высшее</label>
-                           <input required type="radio" id="educ5" value="educ4" name="user__edu">
-                           <label for="educ5" class="user__exp__item">высшее</label>
-                           <input required type="radio" id="educ6" value="educ5" name="user__edu">
-                           <label for="educ6" class="user__exp__item">магистр</label>
-                           <input required type="radio" id="educ7" value="educ6" name="user__edu">
-                           <label for="educ7" class="user__exp__item">кандидат наук</label>                                       
-                           <input required type="radio" id="educ8" value="educ7" name="user__edu">
-                           <label for="educ8" class="user__exp__item">доктор наук</label> 
-                        </div>
-                     </div>
 
-                     <div class="user-info-block">
-                        <h2>Учебное заведение</h2>
-                        <input type="text" class="user-text" value="" name="user__last__edu__inst">
-                     </div>
-
-                     
-                     <div class="user-info-block">
-                        <h2>Факультет</h2>
-                        <input type="text" class="user-text" value="" name="user__last__faculty">
-                     </div>
-
-                     <div class="user-info-block">
-                        <h2>Специализация</h2>
-                        <input type="text" class="user-text" value="" name="user__last__spec">
-                     </div>
-
-                     <div class="user-info-block">
-                        <div class="user__time">
-                           <div class="user__titles">
-                              <h2>Год начала</h2>
-                              <h2>Год окончания</h2>
+                           <div class="user__time__checkbox__wrapper">
+                              <input type="checkbox" class="user__time__checkbox" id="user__t__chk"
+                                 name="user__time__checkbox">
+                              <label for="user__t__chk" class="user__time__checkbox__label">Работаю по настоящее
+                                 время</label>
                            </div>
-                           <div class="user__time__inner">
-                              <select name="user__time__end__year" id="" class="user__time__item user-select-bg">
-                                 <option value="2004">2004</option>
-                                 <option value="2003">2003</option>
-                                 <option selected value="2002">2002</option>
-                                 <option value="2001">2001</option>
-                                 <option value="2000">2000</option>
-                                 <option value="1999">1999</option>
-                                 <option value="1998">1998</option>
-                                 <option value="1997">1997</option>
-                                 <option value="1996">1996</option>
-                                 <option value="1995">1995</option>
-                                 <option value="1994">1994</option>
-                                 <option value="1993">1993</option>
-                                 <option value="1992">1992</option>
-                                 <option value="1991">1991</option>
-                                 <option value="1990">1990</option>
-                                 <option value="1989">1989</option>
-                                 <option value="1988">1988</option>
-                                 <option value="1987">1987</option>
-                                 <option value="1986">1986</option>
-                                 <option value="1985">1985</option>
-                                 <option value="1984">1984</option>
-                                 <option value="1983">1983</option>
-                                 <option value="1982">1982</option>
-                                 <option value="1981">1981</option>
-                                 <option value="1980">1980</option>
-                                 <option value="1979">1979</option>
-                                 <option value="1978">1978</option>
-                                 <option value="1977">1977</option>
-                                 <option value="1976">1976</option>
-                                 <option value="1975">1975</option>
+                        </div>
+
+                     </div>
+
+                     <div class="add__lang" id="addnew">
+                        <span id="addnew">+</span>
+                        <span id="addnew">Добавить опыт работы</span>
+                     </div>
+                  </div>
+                  <div class="user-info-block" id="user__educ__btn__wrap">
+                     <div class="" id="user__educ__container">
+                        <div class="user__educ__wrapper" id="user__educ__wrap">
+                           <h2 class="fw500">Образование</h2>
+                           <div class="user__exp__block">
+                              <input required type="radio" id="educ1" value="educ1" name="user__edu">
+                              <label for="educ1" class="user__exp__item">среднее</label>
+                              <input required type="radio" id="educ2" value="educ2" name="user__edu">
+                              <label for="educ2" class="user__exp__item">средне-специальное</label>
+                              <input required type="radio" id="educ3" value="educ3" name="user__edu">
+                              <label for="educ3" class="user__exp__item">неоконченное высшее</label>
+                              <input required type="radio" id="educ4" value="educ4" name="user__edu">
+                              <label for="educ4" class="user__exp__item">высшее</label>
+                              <input required type="radio" id="educ5" value="educ4" name="user__edu">
+                              <label for="educ5" class="user__exp__item">высшее</label>
+                              <input required type="radio" id="educ6" value="educ5" name="user__edu">
+                              <label for="educ6" class="user__exp__item">магистр</label>
+                              <input required type="radio" id="educ7" value="educ6" name="user__edu">
+                              <label for="educ7" class="user__exp__item">кандидат наук</label>
+                              <input required type="radio" id="educ8" value="educ7" name="user__edu">
+                              <label for="educ8" class="user__exp__item">доктор наук</label>
+                           </div>
+
+
+                           <h2>Учебное заведение</h2>
+                           <input type="text" class="user-text" value="" name="user__last__edu__inst">
+
+
+
+
+                           <h2>Факультет</h2>
+                           <input type="text" class="user-text" value="" name="user__last__faculty">
+
+
+
+                           <h2>Специализация</h2>
+                           <input type="text" class="user-text" value="" name="user__last__spec">
+
+
+
+                           <div class="user__time">
+                              <div class="user__titles">
+                                 <h2>Год начала</h2>
+                                 <h2>Год окончания</h2>
+                              </div>
+                              <div class="user__time__inner">
+                                 <select name="user__time__end__year" id="" class="user__time__item user-select-bg">
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option selected value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1984">1984</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1980">1980</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1978">1978</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1976">1976</option>
+                                    <option value="1975">1975</option>
+                                 </select>
+
+                                 <div class="horizontal__row"></div>
+
+
+                                 <select name="user__time__end__year" id="" class="user__time__item user-select-bg">
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option selected value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1984">1984</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1980">1980</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1978">1978</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1976">1976</option>
+                                    <option value="1975">1975</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="add__lang">
+                        <span id="addnew">+</span>
+                        <span id="addnew">Добавить образование</span>
+                     </div>
+                  </div>
+
+                  <div class="user-info-block">
+                     <h2>Знание программ</h2>
+                     <div class="user__time__checkbox__wrapper">
+                        <input type="checkbox" class="user__time__checkbox" id="user__program__chk"
+                           name="user__prog__checkbox">
+                        <label for="user__program__chk" class="user__time__checkbox__label">1C</label>
+                     </div>
+                     <div class="user__time__checkbox__wrapper">
+                        <input type="checkbox" class="user__time__checkbox" id="user__program__chk1"
+                           name="user__prog__checkbox">
+                        <label for="user__program__chk1" class="user__time__checkbox__label">MS Office</label>
+                     </div>
+                  </div>
+
+                  <div class="user-info-block" id="user__lang__btn__wrapper">
+                     <h2 class="fw500 user-info-block-title">Владение языками</h2>
+                     <div class="user__lang__wrapper" id="user__lang__wrap">
+                        <div class="user__lang__item">
+                           <div class="user-info-block-subtitle">
+                              <div>Язык</div>
+                              <div>Уровень владения</div>
+                           </div>
+
+                           <div class="user-info-block__lang__item">
+                              <input type="text" class="user-info-block__lang__item__txt" name="lang"
+                                 placeholder="Туркменский">
+                              <select name="lang__lev" id="" class="">
+                                 <option value="ll1">Базовый</option>
+                                 <option value="ll1">Продвинутый</option>
+                                 <option value="ll1">Говорю свободно</option>
+                                 <option value="ll1">В совершенстве</option>
+                                 <option value="ll1">Профильный</option>
                               </select>
-
-                              <div class="horizontal__row"></div>
-
-
-                              <select name="user__time__end__year" id="" class="user__time__item user-select-bg">
-                                 <option value="2004">2004</option>
-                                 <option value="2003">2003</option>
-                                 <option selected value="2002">2002</option>
-                                 <option value="2001">2001</option>
-                                 <option value="2000">2000</option>
-                                 <option value="1999">1999</option>
-                                 <option value="1998">1998</option>
-                                 <option value="1997">1997</option>
-                                 <option value="1996">1996</option>
-                                 <option value="1995">1995</option>
-                                 <option value="1994">1994</option>
-                                 <option value="1993">1993</option>
-                                 <option value="1992">1992</option>
-                                 <option value="1991">1991</option>
-                                 <option value="1990">1990</option>
-                                 <option value="1989">1989</option>
-                                 <option value="1988">1988</option>
-                                 <option value="1987">1987</option>
-                                 <option value="1986">1986</option>
-                                 <option value="1985">1985</option>
-                                 <option value="1984">1984</option>
-                                 <option value="1983">1983</option>
-                                 <option value="1982">1982</option>
-                                 <option value="1981">1981</option>
-                                 <option value="1980">1980</option>
-                                 <option value="1979">1979</option>
-                                 <option value="1978">1978</option>
-                                 <option value="1977">1977</option>
-                                 <option value="1976">1976</option>
-                                 <option value="1975">1975</option>
-                              </select>
-                           </div>
-                           <div class="add__lang">
-                              <span>+</span>
-                              <span>Добавить образование</span>
                            </div>
                         </div>
                      </div>
 
-                     <div class="user-info-block">
-                        <h2>Знание программ</h2>
-                        <div class="user__time__checkbox__wrapper">
-                           <input type="checkbox" class="user__time__checkbox" id="user__program__chk" name="user__prog__checkbox">
-                           <label for="user__program__chk" class="user__time__checkbox__label">1C</label>
-                        </div>
-                        <div class="user__time__checkbox__wrapper">
-                           <input type="checkbox" class="user__time__checkbox" id="user__program__chk1" name="user__prog__checkbox">
-                           <label for="user__program__chk1" class="user__time__checkbox__label">MS Office</label>
-                        </div>
+                     <div class="add__lang">
+                        <span id="addnew">+</span>
+                        <span id="addnew">Указать ещё</span>
                      </div>
+                  </div>
 
-                     <div class="user-info-block">
-                        <h2 class="fw500 user-info-block-title">Владение языками</h2>
-                        <div class="user-info-block-subtitle">
-                           <div>Язык</div>
-                           <div>Уровень владения</div>
-                        </div>
 
-                        <div class="user-info-block__lang__item">
-                           <input type="text" class="user-info-block__lang__item__txt" name="lang" placeholder="Туркменский">
-                           <select name="lang__lev" id="" class="">
-                              <option value="ll1">Базовый</option>
-                              <option value="ll1">Продвинутый</option>
-                              <option value="ll1">Говорю свободно</option>
-                              <option value="ll1">В совершенстве</option>
-                              <option value="ll1">Профильный</option>
-                           </select>     
-                        </div>
 
-                        <div class="add__lang">
-                           <span>+</span>
-                           <span>Указать ещё</span>
-                        </div>
+
+
+
+
+
+
+
+
+                  <div class="user-info-block ">
+                     <h2 class="fw500 user-info-block-title">
+                        О себе
+                     </h2>
+                     <div class="user__info__block__txt__area__wrapper">
+                        <textarea name="user__ab" id="" class="user-info-block-txtarea"
+                           placeholder="Расскажите о своих знаниях, навыках и личных качествах, которые могут быть поезны работодателям"></textarea>
                      </div>
+                  </div>
+                  <input required type="submit" class="continue__btn green__btn m-0auto"
+                     value="Сохранить и опубликовать" name="continue">
 
-
-
-
-
-
-
-                     
-
-                     
-
-                     <div class="user-info-block ">
-                        <h2 class="fw500 user-info-block-title">
-                           О себе
-                        </h2>
-                        <div class="user__info__block__txt__area__wrapper">
-                           <textarea name="user__ab" id="" class="user-info-block-txtarea" placeholder="Расскажите о своих знаниях, навыках и личных качествах, которые могут быть поезны работодателям"></textarea>
-                        </div>
-                     </div>
-                     <input required type="submit" class="continue__btn green__btn m-0auto" value="Сохранить и опубликовать" name="continue">
-
-                     <a href="" class="skip__link m-0auto">
-                        Пропустить
-                     </a>
+                  <a href="" class="skip__link m-0auto">
+                     Пропустить
+                  </a>
                </form>
 
             </div>
          </div>
       </div>
    </div>
+   <!-- <script src="../scripts/header.js"></script> -->
+   <script src="../scripts/create__res__vac.js"></script>
 </body>
+
 </html>

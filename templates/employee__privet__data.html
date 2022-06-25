@@ -10,19 +10,59 @@
    </head>
    <body>
       <div class="container__main pad-0 w-1920">
-         <header class="header-wavy">
-            <div class="container__content header-wavy__inner">
-               <img src="../src/images/header/Ishim__logo.png" alt="" class="header__pic">
-               <div class="header__loc">
-                  <form action="">
-                     <select name="interface__lang" id="">
-                        <option value="RU" class="header__loc__current">RU</option>
-                        <option value="TM" class="header__loc__current">TM</option>
-                     </select>
-                  </form>
+         <header class="header">
+            <div class="container__content">
+               <div class="header__content">         
+                  <section class="header__sec__type3 ">
+                     <img src="../src/images/header/Ishim__logo.png" alt="" class="header__pic ">
+                     
+                  </section>
+                  <section class="header__sec__type3">
+                     <form action="">
+                        <div class="nav">
+                           <img src="../src/images/search__ic.svg" alt="Sorry">
+                              <input type="text" class="nav__inp" placeholder="Профессия, должность или ключевые слова">
+                              <input type="text" class="nav__inp__small" placeholder="Профессия">
+                        </div>
+<a href="">
+    <img src="../src/images/nav__setting.png" 
+     alt="Sorry" class="nav__set__pic">
+</a>
+                     </form>
+                  </section>
+   
+                  <section class="header__sec__type3">
+                     <a href="" class="header__user__pic">
+                        <img src="../src/images/user__def__ic.png" alt="Sorry">
+                     </a>
+                     <button class="hamburger hamburger-line">
+                        <span></span>
+                     </button>
+                  </section>
                </div>
             </div>
          </header>
+         <div class="container__content">
+            <div class="nav__burger disappear">
+               <h1 class="nav__title">Меню</h1>
+      
+               <a href="" class="nav__link">Каталог компаний</a>
+      
+               <a href="" class="nav__link">Статьи</a>
+   
+               <select name="interface__lang" onchange="window.location.href=this.options[this.selectedIndex].value" class="nav__link">
+                  <option selected disabled hidden class="header__loc__current">Язык</option>
+                  <option value="" class="header__loc__current">RU</option>
+                  <option value="" class="header__loc__current">TM</option>
+               </select>
+   
+               <a href="" class="nav__link">История поиска</a>
+      
+               <a href="" class="nav__link">Условия использования и политика конфиденциальности</a>
+      
+               <a href="" class="nav__link">Связаться с нами</a>
+            </div>
+         </div>
          <div class="priv__data mt-60">
             <div class="container__content">
                <div class="priv__data__inner">
@@ -76,6 +116,6 @@
             </div> 
          </div>
       </div>
-
+      <script src="../scripts/header.js"></script>
 </body>
 </html>
