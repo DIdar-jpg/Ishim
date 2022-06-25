@@ -274,6 +274,11 @@ svg {
 	background-color: var(--green-light);
 }
 
+.header2 {
+	height: 82px;
+	background-color: var(--green-light);
+}
+
 .header__content {
 	width: 100%;
 	display: flex;
