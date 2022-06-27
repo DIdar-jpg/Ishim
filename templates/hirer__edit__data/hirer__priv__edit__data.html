@@ -5,8 +5,9 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
    <link rel="stylesheet" href="../../main.css">
-   <title>RegistrationHEmployeeConfidentially</title>
+   <title>Hirer Edit Page</title>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
          <div class="container__content header-wavy__inner">
             <img src="../../src/images/header/Ishim__logo.png" alt="" class="header__pic">
             <div class="header__loc">
-               <form action="">
+               <form action="" method="post">
                   <select name="interface__lang" id=""
                      onchange="window.location.href=this.options[this.selectedIndex].value">
                      <option value="RU" class="header__loc__current">RU</option>
@@ -30,7 +31,7 @@
       <div class="reg-user-conf container__content">
          <div class="reg-user-conf__inner">
             <div class="reg-user-conf__content">
-               <h1 class="reg-user-conf__title">Регистрация пользователя</h1>
+               <h1 class="reg-user-conf__title">Измените данные</h1>
 
                <form action="" class="reg-user-conf__form" method="post" enctype="multipart/form-data" id="form__id">
                   <div class="user-full-name">
@@ -38,16 +39,16 @@
                         <h2>Имя</h2>
                         <h2>Фамилия</h2>
                      </div>
-                     <input type="text" class="user-name" value="" name="user__name">
+                     <input required type="text" class="user-name" value="">
 
-                     <input type="text" class="user-surname" value="" name="user__surname">
+                     <input required type="text" class="user-surname" value="">
                   </div>
 
                   <div class="user-birth-date">
                      <h2>Дата рождения</h2>
-                     <input type="tel" class="user-bd__date user-bd__item" name="user-bd__date" value=""
+                     <input required type="tel" class="user-bd__date user-bd__item" name="user-bd__date" value=""
                         placeholder="03">
-                     <select name="user-bd__mon" id="" class="user-bd__item user-select-bg">
+                     <select required name="user-bd__mon" id="" class="user-bd__item user-select-bg">
                         <option value="Jan">Январь</option>
                         <option value="Feb">Февраль</option>
                         <option selected value="">Март</option>
@@ -62,7 +63,7 @@
                         <option value="Dec">Декабрь</option>
                      </select>
 
-                     <select name="user-bd__year" id="" class="user-bd__item user-select-bg">
+                     <select required name="user-bd__year" id="" class="user-bd__item user-select-bg">
                         <option value="2004">2004</option>
                         <option value="2003">2003</option>
                         <option selected value="2002">2002</option>
@@ -115,25 +116,27 @@
                   </div>
 
                   <div class="user-info-block user-mob-block">
-                     <h2>Мобильный телефон</h2>
-                     <div class="user-mob-pic-wrapper">
-                        <img src="../../src/images/info__pic.svg" alt="" class="user-mob-pic">
-                        <p class="user-mob-info">
-                           Укажите номер по которому лучше всего можно связаться с вами
-                        </p>
-                     </div>
-                     <input type="tel" class="user-text" value="+993" name="user__num">
+                     <h2 class="mob__h2">Мобильный телефон
+                        <div class="user-mob-pic-wrapper">
+                           <img src="../../src/images/info__pic.svg" alt="" class="user-mob-pic">
+                           <p class="user-mob-info">
+                              Укажите номер по которому лучше всего можно связаться с вами
+                           </p>
+                        </div>
+                     </h2>
+
+                     <input required type="tel" class="user-text" value="+993">
                   </div>
 
                   <div class="user-info-block">
                      <h2>Эл. почта</h2>
-                     <input type="text" class="user-text" value="" name="user__mail">
+                     <input required type="text" class="user-text" value="">
                   </div>
 
                   <div class="user-info-block">
                      <h2>Пароль</h2>
                      <div class="user-inp-blok">
-                        <input type="password" class="user-text" value="" name="user__pass">
+                        <input required type="password" class="user-text" value="">
                         <img src="../../src/images/close__eye.svg" alt="" class="user-block-pic" id="eye__btn">
                      </div>
 
@@ -141,14 +144,14 @@
                   <div class="user-info-block">
                      <h2>Подтверждение пароля</h2>
                      <div class="user-inp-blok">
-                        <input type="password" class="user-text" value="" name="user__pass__check">
+                        <input required type="password" class="user-text" value="">
                         <img src="../../src/images/close__eye.svg" alt="" class="user-block-pic" id="eye__btn">
                      </div>
                   </div>
 
                   <div class="user-info-block" id="city__wrapper">
                      <h2>Город проживания</h2>
-                     <select name="user__city" id="user__city" class="user-text user-select-bg">
+                     <select required name="user__city" id="user__city" class="user-text user-select-bg">
                         <option slected value="ag">Ашхабад</option>
                         <option value="annau">Аннау</option>
                         <option value="baharden">Бахарден</option>
@@ -172,7 +175,7 @@
                         <label for="woman-id" class="user-gender">Женщина</label>
                      </div>
                   </div>
-                  <input type="submit" class="continue__btn purp__btn m-0auto" value="Продолжить">
+                  <input required type="submit" class="continue__btn purp__btn m-0auto" value="Продолжить">
 
                </form>
             </div>

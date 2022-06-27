@@ -74,9 +74,9 @@
       </div>
 
       <div class="reg-user-conf container__content">
-         <div class="reg-user-conf__inner">
+         <div class="advance__s__inner">
             <div class="reg-user-conf__content">
-               <h1 class="reg-user-conf__title">Создайте вакансию</h1>
+               <h1 class="reg-user-conf__title">Расширеный поиск</h1>
 
                <form action="" class="reg-user-conf__form">
                   <div class="user-info-block">
@@ -89,40 +89,29 @@
 
                   <div class="user-info-block" id="industry__wrapper">
                      <h2>Сфера деятельности</h2>
-                     <select required name="user__industry" id="user__industry" class="user-text user-select-bg">
-                        <option value="">SomeIndustry</option>
-                        <option value="">SomeIndustry</option>
-                        <option value="">SomeIndustry</option>
-                        <option value="">SomeIndustry</option>
-                        <option value="" id="someID">Другое</option>
-                     </select>
-
+                     <input required type="text" class="user-text" value="" placeholder="" name="user__industry"
+                        id="user__industry">
                   </div>
 
                   <div class="user-info-block">
                      <h2>Какую зарплату вы предлогаете?</h2>
-                     <!-- <div class="user-inp-blok-salary">
-                              <div class="user-inp-blok-salary__item">
-                                 <span>от</span>
-                                 <input required type="text" class="user-text-w45" value="">
-                                 <span>ман.</span>
-                              </div>
-                              <div class="user-inp-blok-salary__row"></div>
-                              <div class="user-inp-blok-salary__item">
-                                 <span>до</span>
-                                 <input required type="text" class="user-text-w45" value="">
-                                 <span>ман.</span>
-                              </div>
-                           </div> -->
-
-
-                     <div class="user-inp-blok">
-                        <input required type="text" class="user-text" value="" placeholder="Укажите зарплату"
-                           name="user__salary" id="user__salary">
+                     <div class="user-inp-blok-salary">
+                        <div class="user-inp-blok-salary__item">
+                           <span>от</span>
+                           <input required type="text" class="user-text-w45" value="">
+                           <span>ман.</span>
+                        </div>
+                        <div class="user-inp-blok-salary__row"></div>
+                        <div class="user-inp-blok-salary__item">
+                           <span>до</span>
+                           <input required type="text" class="user-text-w45" value="">
+                           <span>ман.</span>
+                        </div>
                      </div>
+
                   </div>
 
-                  <div class="user-info-block">
+                  <div class="user-info-block" id="user__registration__wrapper">
                      <h2>Прописка</h2>
                      <select required name="user__registration" id="user__registration"
                         class="user-text user-select-bg">
@@ -249,23 +238,10 @@
                   </div>
 
 
-                  <div class="user-info-block">
-                     <h2 class="fw500 user-info-block-title">Обязанности</h2>
-                     <div class="user__info__block__txt__area__wrapper">
-                        <textarea name="user__job__resp" id="user__job__resp" class="user-info-block-txtarea"
-                           placeholder="Опишите обязанности и задачи которые должен выполнять работник"></textarea>
-                     </div>
-                  </div>
 
 
-                  <div class="user-info-block">
-                     <h2 class="fw500 user-info-block-title">Условия работы</h2>
-                     <div class="user__info__block__txt__area__wrapper">
-                        <textarea name="user__working__conditions" id="user__working__conditions"
-                           class="user-info-block-txtarea2"
-                           placeholder="Укажите пожелания к работнику. Отметьте какими качествами и навыками должен обладать ваш работник и другую информацию касательно работы"></textarea>
-                     </div>
-                  </div>
+
+
 
 
                   <div class="user-info-block">
@@ -302,48 +278,60 @@
                      </div>
                   </div>
 
-                  <div class="user-info-block">
-                     <h2 class="fw500 user-info-block-title">
-                        Дополнительная информация о зарплате
-                     </h2>
-                     <div class="user__info__block__txt__area__wrapper">
-                        <textarea name="payment__additionally" id="payment__additionally"
-                           class="user-info-block-txtarea"
-                           placeholder="Вы можете указать информацию об откладе или возможности повышения"></textarea>
-                     </div>
+                  <section class="search__history__section">
 
-                  </div>
+                     <div class="search__history__item">
 
-                  <div class="user__contact__wrapper">
-                     <h2 class="fw500 user-info-block-title">Контакты</h2>
-                     <div class="user__contact__item">
-                        <input type="text" class="user__contact__inp" placeholder="Овез Бердыев" value=""
-                           name="user__name" id="user__name">
-                     </div>
+                        <div class="search__history__item__cats__wrapper">
+                           <a href="" class="search__history__item__cat">
+                              Туркменский
+                           </a>
+                           <a href="" class="search__history__item__cat">
+                              Гибкий график
+                           </a>
+                           <a href="" class="search__history__item__cat">
+                              Пол мужской
+                           </a>
+                           <a href="" class="search__history__item__cat">
+                              Пол мужской
+                           </a>
+                           <a href="" class="search__history__item__cat">
+                              Образование среднее
+                           </a>
+                           <a href="" class="search__history__item__cat">
+                              Ашхабад
+                           </a>
+                           <a href="" class="search__history__item__cat">
+                              Опыт 1 - 3 года
+                           </a>
+                           <a href="" class="search__history__item__cat">
+                              Бухгалтерия и управление
+                           </a>
+                           <a href="" class="search__history__item__cat">
+                              от 1800 ман
+                           </a>
 
-                     <div class="user__contact__item">
-                        <svg width="20" height="20" class="mr5">
-                           <use xlink:href="#mob__pic" width="20" height="20" fill="none" stroke="rgba(0, 0, 0, 0.3)">
-                           </use>
-                        </svg>
-                        <input type="text" class="user__contact__inp" placeholder="+993..." value="+993 "
-                           name="user__number" id="user__number">
+
+
+
+
+
+                        </div>
                      </div>
-                     <div class="user__contact__item">
-                        <span class="mr5">&#9993;</span>
-                        <input type="text" class="user__contact__inp" placeholder="example.mail.com" value=""
-                           name="user__email" id="user__email">
-                     </div>
-                  </div>
-                  <input required type="submit" class="continue__btn purp__btn m-0auto" value="Продолжить" id="btn">
+                  </section>
+
+
+
+
+
+                  <input required type="submit" class="continue__btn green__btn m-0auto" value="Искать" id="btn">
                </form>
             </div>
          </div>
       </div>
    </div>
    <script src="../scripts/header.js"></script>
-   <script src="../scripts/create__vac.js"></script>
-   <script src="../scripts/select_another.js"></script>
+   <script src="../scripts/select_another_city_registry.js"></script>
 </body>
 
 </html>

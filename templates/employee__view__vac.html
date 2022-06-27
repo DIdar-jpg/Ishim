@@ -1,149 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="stylesheet" href="../main.css">
-      <title>My vacancy</title>
-   </head>
-   <body>
-      <svg display="none">
-         <symbol id="favorites__str" viewBox="0 0 28 27">
-            <g>
-               <path d="M14 1L18.017 9.13603L27 10.4487L20.5 16.7782L22.034 25.72L14 21.496L5.966 25.72L7.5 16.7782L1 10.4487L9.983 9.13603L14 1Z" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </g>
-         </symbol>
-      </svg>
-      <div class="container__main pad-0 w-1920">
-         <header class="header">
-            <div class="container__content">
-               <div class="header__content">         
-                  <section class="header__sec__type3 ">
-                     <img src="../src/images/header/Ishim__logo.png" alt="" class="header__pic ">
-                     
-                  </section>
-                  <section class="header__sec__type3">
-                     <form action="">
-                        <div class="nav">
-                           <img src="../src/images/search__ic.svg" alt="Sorry">
-                              <input type="text" class="nav__inp" placeholder="Профессия, должность или ключевые слова">
-                              <input type="text" class="nav__inp__small" placeholder="Профессия">
-                        </div>
-<a href="">
-    <img src="../src/images/nav__setting.png" 
-     alt="Sorry" class="nav__set__pic">
-</a>
-                     </form>
-                  </section>
-   
-                  <section class="header__sec__type3">
-                     <a href="" class="header__user__pic">
-                        <img src="../src/images/user__def__ic.png" alt="Sorry">
-                     </a>
-                     <button class="hamburger hamburger-line">
-                        <span></span>
-                     </button>
-                  </section>
-               </div>
-            </div>
-         </header>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="stylesheet" href="../main.css">
+   <title>My vacancy</title>
+</head>
+
+<body>
+   <svg display="none">
+      <symbol id="favorites__str" viewBox="0 0 28 27">
+         <g>
+            <path
+               d="M14 1L18.017 9.13603L27 10.4487L20.5 16.7782L22.034 25.72L14 21.496L5.966 25.72L7.5 16.7782L1 10.4487L9.983 9.13603L14 1Z"
+               stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+         </g>
+      </symbol>
+   </svg>
+   <div class="container__main pad-0 w-1920">
+      <header class="header">
          <div class="container__content">
-            <div class="nav__burger disappear">
-               <h1 class="nav__title">Меню</h1>
-      
-               <a href="" class="nav__link">Каталог компаний</a>
-      
-               <a href="" class="nav__link">Статьи</a>
-   
-               <select name="interface__lang" onchange="window.location.href=this.options[this.selectedIndex].value" class="nav__link">
-                  <option selected disabled hidden class="header__loc__current">Язык</option>
-                  <option value="" class="header__loc__current">RU</option>
-                  <option value="" class="header__loc__current">TM</option>
-               </select>
-   
-               <a href="" class="nav__link">История поиска</a>
-      
-               <a href="" class="nav__link">Условия использования и политика конфиденциальности</a>
-      
-               <a href="" class="nav__link">Связаться с нами</a>
+            <div class="header__content">
+               <section class="header__sec__type3 ">
+                  <img src="../src/images/header/Ishim__logo.png" alt="" class="header__pic ">
+
+               </section>
+               <section class="header__sec__type3">
+                  <form action="">
+                     <div class="nav">
+                        <img src="../src/images/search__ic.svg" alt="Sorry">
+                        <input type="text" class="nav__inp" placeholder="Профессия, должность или ключевые слова">
+                        <input type="text" class="nav__inp__small" placeholder="Профессия">
+                     </div>
+                     <a href="">
+                        <img src="../src/images/nav__setting.png" alt="Sorry" class="nav__set__pic">
+                     </a>
+                  </form>
+               </section>
+
+               <section class="header__sec__type3">
+                  <a href="" class="header__user__pic">
+                     <img src="../src/images/user__def__ic.png" alt="Sorry">
+                  </a>
+                  <a href="" class="hamburger hamburger-line">
+                     <span></span>
+                  </a>
+               </section>
             </div>
          </div>
-         <div class="container__content">
-            <div class="my__vac__view">
-               <h1 class="mvv__headline">Графический дизайнер</h1>
-               <h3 class="mvv__salary">2300 манат</h3>
-               <span class="mvv__main__info">Компания ABC</span>
-               <span class="mvv__main__info">Дизайн</span>
-               <span class="mvv__main__info">Лебап, г. Керки</span>
-               <span class="mvv__main__info">Опубликовано в 16:42</span>
-               
-               <div class="mvv__refresh__in__search__btn__wrapper">
-                  <button class="mvv__refresh__in__search__btn green__btn">Откликнуться</button> 
-                  <svg width="30px" height="30px">
-                     <use xlink:href="#favorites__str" width="30px" height="30px" class="vac__ico"></use>
-                  </svg>
-               </div>
-      
-               <h4 class="mvv__subtitle">Требования
-               </h4>
-               <p class="mvv__info">
-                  <span>Опыт: от 1 до 3 лет</span>
-                  
-                  <span>Возраст: от 20 лет</span>
-                
-                  <span>Пол: не имеет значения</span>
-                  
-                  <span>Образование: высшее</span>
-               </p>
-               <h4 class="mvv__subtitle">Владение языками</h4>
-               <p class="mvv__info">
-                  <span>Русский - не имеет значения</span>
-                  
-                  <span>Туркменский - технический</span>
-                  
-                  <span>Английский - разговорный</span>
-               </p>
-               <h4 class="mvv__subtitle">Обязанности:</h4>
-               <p class="mvv__info">
-                  Разработка дизайна сувенирной продукции.
-                  Создание макетов рекламной полиграфической продукции.
-                  Разработка элементов корпоративного стиля.
-                  Разработка графических макетов
-               </p>
-               <h4 class="mvv__subtitle">Условия работы</h4>
-               <p class="mvv__info">
-                  <span>
-                     Приветствуется знание программ 3Ds Max, Blender, Maya и т.д.
-                     Умение работать в команде, справляться с многозадачностью;
-                     Внимательность, добросовестность, ответственность‚ легко обучаемость‚ гибкость, коммуникабельность‚ инициативность, терпение, усидчивость, трудолюбие.
-                  </span>
-                  
-                  <span>Занятость: полная занятость</span>
-                  
-                  <span>График: гибкий график</span>
-               </p>
-               <h4 class="mvv__subtitle">Дополнительная информация о зарплате</h4>
-               <p class="mvv__info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima recusandae quaerat error laudantium minus eos cum inventore deserunt reprehenderit, eveniet sequi quam ad! Incidunt voluptas labore aliquam quo voluptates accusantium?
-               </p>
+      </header>
+      <div class="container__content">
+         <div class="nav__burger disappear">
+            <h1 class="nav__title">Меню</h1>
 
-               <div class="e__v__vac__item">
-                  <h4>Зарегистрируйтесь чтобы откликнуться, и получить доступ к остальным функциям сайта</h4>
-                  <a href="" class="e__v__vac__item__btn green__btn">
-                     Перейти к регистрации
-                  </a>
-               </div>
-               <div class="mvv__contacts">
-                  <h4 class="mvv__subtitle">Контакты</h4>
-                  <span>Овез Бердыев</span>
-                  <span>+99363445566</span>
-                  <span>owezb@gmail.com</span>
-               </div>
-            </div>
-         </div>    
+            <a href="" class="nav__link">Каталог компаний</a>
+
+            <a href="" class="nav__link">Статьи</a>
+
+            <select name="interface__lang" onchange="window.location.href=this.options[this.selectedIndex].value"
+               class="nav__link">
+               <option selected disabled hidden class="header__loc__current">Язык</option>
+               <option value="" class="header__loc__current">RU</option>
+               <option value="" class="header__loc__current">TM</option>
+            </select>
+
+            <a href="" class="nav__link">История поиска</a>
+
+            <a href="" class="nav__link">Условия использования и политика конфиденциальности</a>
+
+            <a href="" class="nav__link">Связаться с нами</a>
+         </div>
       </div>
-      <script src="../scripts/header.js"></script>
+      <div class="container__content">
+         <div class="my__vac__view" id="fav__btn__wrapper">
+            <h1 class="mvv__headline">Графический дизайнер</h1>
+            <h3 class="mvv__salary">2300 манат</h3>
+            <span class="mvv__main__info">Компания ABC</span>
+            <span class="mvv__main__info">Дизайн</span>
+            <span class="mvv__main__info">Лебап, г. Керки</span>
+            <span class="mvv__main__info">Опубликовано в 16:42</span>
+
+            <div class="mvv__refresh__in__search__btn__wrapper">
+               <a href="" class="mvv__refresh__in__search__btn green__btn">Откликнуться</a>
+               <svg width="30px" height="30px">
+                  <use xlink:href="#favorites__str" width="30px" height="30px" class="vac__ico"></use>
+               </svg>
+            </div>
+
+            <h4 class="mvv__subtitle">Требования
+            </h4>
+            <p class="mvv__info">
+               <span>Опыт: от 1 до 3 лет</span>
+
+               <span>Возраст: от 20 лет</span>
+
+               <span>Пол: не имеет значения</span>
+
+               <span>Образование: высшее</span>
+            </p>
+            <h4 class="mvv__subtitle">Владение языками</h4>
+            <p class="mvv__info">
+               <span>Русский - не имеет значения</span>
+
+               <span>Туркменский - технический</span>
+
+               <span>Английский - разговорный</span>
+            </p>
+            <h4 class="mvv__subtitle">Обязанности:</h4>
+            <p class="mvv__info">
+               Разработка дизайна сувенирной продукции.
+               Создание макетов рекламной полиграфической продукции.
+               Разработка элементов корпоративного стиля.
+               Разработка графических макетов
+            </p>
+            <h4 class="mvv__subtitle">Условия работы</h4>
+            <p class="mvv__info">
+               <span>
+                  Приветствуется знание программ 3Ds Max, Blender, Maya и т.д.
+                  Умение работать в команде, справляться с многозадачностью;
+                  Внимательность, добросовестность, ответственность‚ легко обучаемость‚ гибкость, коммуникабельность‚
+                  инициативность, терпение, усидчивость, трудолюбие.
+               </span>
+
+               <span>Занятость: полная занятость</span>
+
+               <span>График: гибкий график</span>
+            </p>
+            <h4 class="mvv__subtitle">Дополнительная информация о зарплате</h4>
+            <p class="mvv__info">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima recusandae quaerat error laudantium minus
+               eos cum inventore deserunt reprehenderit, eveniet sequi quam ad! Incidunt voluptas labore aliquam quo
+               voluptates accusantium?
+            </p>
+
+            <div class="e__v__vac__item">
+               <h4>Зарегистрируйтесь чтобы откликнуться, и получить доступ к остальным функциям сайта</h4>
+               <a href="" class="e__v__vac__item__btn green__btn">
+                  Перейти к регистрации
+               </a>
+            </div>
+            <div class="mvv__contacts">
+               <h4 class="mvv__subtitle">Контакты</h4>
+               <span>Овез Бердыев</span>
+               <span>+99363445566</span>
+               <span>owezb@gmail.com</span>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="../scripts/header.js"></script>
+   <script src="../scripts/favourtie.js"></script>
 </body>
+
 </html>

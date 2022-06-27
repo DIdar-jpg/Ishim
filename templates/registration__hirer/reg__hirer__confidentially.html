@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
    <link rel="stylesheet" href="../../main.css">
    <title>RegistrationHirerConfidentially</title>
 </head>
+
 <body>
    <div class="container__main pad-0 w-1920">
       <header class="header-wavy">
          <div class="container__content header-wavy__inner">
             <img src="../../src/images/header/Ishim__logo.png" alt="" class="header__pic">
             <div class="header__loc">
-               <form action="">
-                  <select name="interface__lang" id="">
+               <form action="" method="post">
+                  <select name="interface__lang" id=""
+                     onchange="window.location.href=this.options[this.selectedIndex].value">
                      <option value="RU" class="header__loc__current">RU</option>
                      <option value="TM" class="header__loc__current">TM</option>
                   </select>
@@ -25,26 +28,27 @@
       </header>
 
 
-         <div class="reg-user-conf container__content">
+      <div class="reg-user-conf container__content">
          <div class="reg-user-conf__inner">
             <div class="reg-user-conf__content">
                <h1 class="reg-user-conf__title">Регистрация Работодателя</h1>
 
-               <form action="" class="reg-user-conf__form">
+               <form action="" class="reg-user-conf__form" id="form__id">
                   <div class="user-full-name">
                      <div class="user-title">
                         <h2>Имя</h2>
                         <h2>Фамилия</h2>
                      </div>
-                     <input required type="text" class="user-name" value="">  
-                     
-                     <input required type="text" class="user-surname" value="">        
+                     <input required type="text" class="user-name" value="">
+
+                     <input required type="text" class="user-surname" value="">
                   </div>
 
                   <div class="user-birth-date">
                      <h2>Дата рождения</h2>
-                     <input required type="tel" class="user-bd__date user-bd__item" name="user-bd__date" value="" placeholder="03">    
-                     <select  required name="user-bd__mon" id=""  class="user-bd__item user-select-bg">
+                     <input required type="tel" class="user-bd__date user-bd__item" name="user-bd__date" value=""
+                        placeholder="03">
+                     <select required name="user-bd__mon" id="" class="user-bd__item user-select-bg">
                         <option value="Jan">Январь</option>
                         <option value="Feb">Февраль</option>
                         <option selected value="">Март</option>
@@ -120,7 +124,7 @@
                            </p>
                         </div>
                      </h2>
-                    
+
                      <input required type="tel" class="user-text" value="+993">
                   </div>
 
@@ -132,22 +136,24 @@
                   <div class="user-info-block">
                      <h2>Пароль</h2>
                      <div class="user-inp-blok">
-                        <input required type="password" class="user-text" value="">
-                        <img src="../../src/images/close__eye.svg" alt="" class="user-block-pic">
+                        <input required type="password" class="user-text" value="" name="user__password"
+                           id="user__password">
+                        <img src="../../src/images/close__eye.svg" alt="" class="user-block-pic" id="eye__btn">
                      </div>
-                     
+
                   </div>
                   <div class="user-info-block">
                      <h2>Подтверждение пароля</h2>
                      <div class="user-inp-blok">
-                        <input required type="password" class="user-text" value="">
-                        <img src="../../src/images/close__eye.svg" alt="" class="user-block-pic">
+                        <input required type="password" class="user-text" value="" name="user__password__check"
+                           id="user__password__check">
+                        <img src="../../src/images/close__eye.svg" alt="" class="user-block-pic" id="eye__btn">
                      </div>
                   </div>
 
-                  <div class="user-info-block">
+                  <div class="user-info-block" id="city__wrapper">
                      <h2>Город проживания</h2>
-                     <select required name="" id="" class="user-text user-select-bg">
+                     <select required name="user__city" id="user__city" class="user-text user-select-bg">
                         <option slected value="ag">Ашхабад</option>
                         <option value="annau">Аннау</option>
                         <option value="baharden">Бахарден</option>
@@ -178,5 +184,8 @@
          </div>
       </div>
    </div>
+   <script src="../../scripts/select_another_city.js"></script>
+   <script src="../../scripts/show_hide_pass.js"></script>
 </body>
+
 </html>

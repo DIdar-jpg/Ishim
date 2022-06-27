@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../../main.css">
+   <title>user__sign__in</title>
+</head>
+
+<body>
+   <div class="container__main pad-0 w-1920">
+      <header class="header-wavy">
+         <div class="container__content header-wavy__inner">
+            <img src="../../src/images/header/Ishim__logo.png" alt="" class="header__pic">
+            <div class="header__loc">
+               <form action="">
+                  <select name="interface__lang" id=""
+                     onchange="window.location.href=this.options[this.selectedIndex].value">
+                     <option value="RU" class="header__loc__current">RU</option>
+                     <option value="TM" class="header__loc__current">TM</option>
+                  </select>
+               </form>
+            </div>
+         </div>
+      </header>
+
+
+      <div class="reg-user-conf container__content">
+         <div class="reg-user-conf__inner">
+            <div class="reg-user-conf__content">
+               <h1 class="reg-user-conf__title">Войти</h1>
+
+               <form action="" class="reg-user-conf__form" method="post" enctype="multipart/form-data" id="form__id">
+                  <div class="user-info-block">
+                     <h2>Эл. почта</h2>
+                     <input required type="text" class="user-text" value="" name="user__mail">
+                  </div>
+                  <div class="user-info-block">
+                     <h2>Пароль</h2>
+                     <div class="user-inp-blok">
+                        <input required type="password" class="user-text" value="" name="user__pass">
+                        <img src="../../src/images/close__eye.svg" alt="" class="user-block-pic" id="eye__btn">
+                     </div>
+
+                  </div>
+                  <input type="submit" class="continue__btn purp__btn m-0auto" value="Продолжить">
+
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="../../scripts/select_another_city.js"></script>
+   <script src="../../scripts/show_hide_pass.js"></script>
+
+</body>
+
+</html>

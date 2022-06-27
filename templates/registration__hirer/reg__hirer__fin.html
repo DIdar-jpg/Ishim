@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
    <link rel="stylesheet" href="../../main.css">
    <title>RegistrationHirerFinish</title>
 </head>
+
 <body>
    <div class="container__main pad-0 w-1920">
       <header class="header-wavy">
@@ -15,7 +17,8 @@
             <img src="../../src/images/header/Ishim__logo.png" alt="" class="header__pic">
             <div class="header__loc">
                <form action="">
-                  <select name="interface__lang" id="">
+                  <select name="interface__lang" id=""
+                     onchange="window.location.href=this.options[this.selectedIndex].value">
                      <option value="RU" class="header__loc__current">RU</option>
                      <option value="TM" class="header__loc__current">TM</option>
                   </select>
@@ -41,4 +44,5 @@
       </div>
    </div>
 </body>
+
 </html>

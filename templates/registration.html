@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+
    <link rel="stylesheet" href="../main.css">
    <title>IshimRegistration</title>
 </head>
+
 <body>
    <div class="container__main pad-0 w-1920">
       <header class="header-wavy">
@@ -15,7 +17,8 @@
             <img src="../src/images/header/Ishim__logo.png" alt="" class="header__pic">
             <div class="header__loc">
                <form action="">
-                  <select name="interface__lang" id="">
+                  <select name="interface__lang" id=""
+                     onchange="window.location.href=this.options[this.selectedIndex].value">
                      <option value="RU" class="header__loc__current">RU</option>
                      <option value="TM" class="header__loc__current">TM</option>
                   </select>
@@ -23,7 +26,7 @@
             </div>
          </div>
       </header>
-      
+
       <div class="reg-u-t container__content">
          <div class="reg-u-t__inner">
             <h1 class="reg-u-t__title">
@@ -41,11 +44,11 @@
                      <img src="../src/images/check__mark.svg" alt="" class="rot--90">
                   </a>
                </div>
-                  <div class="reg-u-t__row"></div>
+               <div class="reg-u-t__row"></div>
                <div class="reg-u-t__item">
                   <h2 class="reg-u-t__item__title">Я ищу сотрудников</h2>
                   <span class="reg-u-t__item__txt">
-                     Размещение вакансий и поиск сотрудников по резюме 
+                     Размещение вакансий и поиск сотрудников по резюме
                   </span>
                   <a href="#" class="reg-u-t__item__btn purp__btn link-w">
                      Продолжить
@@ -57,4 +60,5 @@
       </div>
    </div>
 </body>
+
 </html>

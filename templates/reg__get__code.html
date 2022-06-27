@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
    <link rel="stylesheet" href="../main.css">
    <title>Document</title>
 </head>
+
 <body>
    <div class="container__main pad-0 w-1920">
       <header class="header-wavy">
@@ -14,7 +16,8 @@
             <img src="../src/images/header/Ishim__logo.png" alt="" class="header__pic">
             <div class="header__loc">
                <form action="">
-                  <select name="interface__lang" id="">
+                  <select name="interface__lang" id=""
+                     onchange="window.location.href=this.options[this.selectedIndex].value">
                      <option value="RU" class="header__loc__current">RU</option>
                      <option value="TM" class="header__loc__current">TM</option>
                   </select>
@@ -40,15 +43,17 @@
                   на вашу почту?
                </span>
             </div>
-      
+
             <div class="reg-g-c__notification">
                <span class="reg-g-c__notification__checkmark">
-                  &#10004;	
+                  &#10004;
                </span>
                <p class="reg-g-c__notification__txt">
-                  Нажимая “Зарегестрироваться”, вы подтверждаете, что ознакомлены и полностью согласны с условием использования сайта, а также подтверждаете свое совершенолетие и отвественность за размещение объявлений.
+                  Нажимая “Зарегестрироваться”, вы подтверждаете, что ознакомлены и полностью согласны с условием
+                  использования сайта, а также подтверждаете свое совершенолетие и отвественность за размещение
+                  объявлений.
                </p>
-               
+
             </div>
 
             <button class="reg-g-c__btn purp__btn">Зарегистрироваться</button>
@@ -58,4 +63,5 @@
 
    </div>
 </body>
+
 </html>
