@@ -607,6 +607,8 @@ svg {
 
 .intro__desc__item__btn {
 	display: block;
+	max-width: 200px;
+	text-align: center;
 	background-color: #fff;
 	font-size: 1rem;
 	color: #000;
@@ -784,6 +786,13 @@ svg {
 .setting__btn {
 	width: 35px;
 	height: 35px;
+}
+
+.vac__card__wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .vacancy__card {
@@ -2043,6 +2052,12 @@ reg-h-t = registration-hirer-type
 }
 
 
+.h__fav__art {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
 
 .h__fav {
 	width: 100%;

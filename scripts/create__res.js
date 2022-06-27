@@ -324,6 +324,9 @@ document.getElementById("user__progs__btn__wrapper").addEventListener("click", f
   } else {
   }
 });
+function goUrl(){
+  document.loacation.href = "ВСТАВЬ ССЫЛКУ ДЛЯ ПЕРЕХОДА";
+}
 function makeRequest(body) {
   const xhr = new XMLHttpRequest();
   xhr.open(`POST`, `ВСТАВЬ ССЫЛКУ`);
@@ -332,7 +335,14 @@ function makeRequest(body) {
   xhr.addEventListener("error", () => {
     console.log("error");
   });
+  xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
   xhr.send(JSON.stringify(body));
+
+  if (xhr.status !== 404) {
+    goUrl()
+  } else{
+    console.log('Got some err');
+  }
 }
 
 
@@ -384,6 +394,7 @@ document.getElementById('btn').addEventListener('click' , function(e) {
   const user_exp_start_mon = createArr('user__time__start__mon__exp');
   const user_exp_start_year = createArr('user__time__start__year__exp');
   const user_exp_end_mon = createArr('user__time__end__mon__exp');
+  const user_exp_end_year = createArr('user__time__end__year__exp');
   const user_exp_work_pres = createArr('work_pres');
   const user_edu__instance = createArr('user__edu__instance');
   const user_specialize = createArr('user__specialize');
@@ -391,40 +402,40 @@ document.getElementById('btn').addEventListener('click' , function(e) {
   const user_education_end = createArr('user__time__end__year__exp');
   const user_progs = createArr('user__progs');
   let body = {
-    user_name:document.getElementById('user__name').value,
-    user_surname:document.getElementById('user__surname').value,
-    user_birth_date:`${document.getElementById('user__bd__year').value}-${document.getElementById('user__bd__mon').value}-${document.getElementById('user__bd__date').value}`,
-    user_number: document.getElementById('user__number').value,
-    user_email: document.getElementById('user__email').value,
-    user_registration:document.getElementById('user__registration').value,
-    user_gender:user_gender,
-    user_position:document.getElementById('user__position').value,
-    user_industry:document.getElementById('user__industry').value,
-    user_salary:document.getElementById('user__salary').value,
-    user_busyness:user_busyness,
-    user_schedule:user_schedule,
-    user_exp:{
-      user_exp:user_exp_pos_arr,
-      comp_name:comp_name,
-      user_exp_res:user_exp_res,
-      user_exp_start_mon:user_exp_start_mon,
-      user_exp_start_year:user_exp_start_year,
-      user_exp_end_mon:user_exp_end_mon || user_exp_work_pres,
-      user_exp_end_year:user_exp_end_year || user_exp_work_pres,
+    first_name:document.getElementById('user__name').value,
+    last_name:document.getElementById('user__surname').value,
+    birth_date:`${document.getElementById('user__bd__year').value}-${document.getElementById('user__bd__mon').value}-${document.getElementById('user__bd__date').value}`,
+    phone_number: document.getElementById('user__number').value,
+    email: document.getElementById('user__email').value,
+    registration:document.getElementById('user__registration').value,
+    gender:user_gender,
+    position:document.getElementById('user__position').value,
+    sphere:document.getElementById('user__industry').value,
+    min_salary:document.getElementById('user__salary').value,
+    busyness:user_busyness,
+    schedule:user_schedule,
+    work_exp:{
+      position:user_exp_pos_arr,
+      org_name:comp_name,
+      responsibilities:user_exp_res,
+      start_month:user_exp_start_mon,
+      start_year:user_exp_start_year,
+      end_month:user_exp_end_mon || user_exp_work_pres,
+      end_year:user_exp_end_year || user_exp_work_pres,
     },
-    user_education: {
+    education: {
       degree:user_degree,
-      user_edu__instance:user_edu__instance,
-      user_specialize:user_specialize,
-      user_education_start:user_education_start,
-      user_education_end:user_education_end,
+      establishment:user_edu__instance,
+      specialization :user_specialize,
+      start_year:user_education_start,
+      end_year:user_education_end,
     },
-    user_progs: user_progs,
-    user_langs: {
+    progs: user_progs,
+    langs: {
      lang:lang_arr,
      lang_lev:langlev_arr,
     },
-    user_about:document.getElementById('user__about').value
+    about:document.getElementById('user__about').value
   }
   makeRequest(body);
   console.log(body);

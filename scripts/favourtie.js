@@ -5,6 +5,7 @@ function makeRequest() {
   xhr.addEventListener("error", () => {
     console.log("error");
   });
+  xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
   xhr.send(JSON.stringify());
 }
 document.getElementById("fav__btn__wrapper").addEventListener("click", function (e) {
@@ -17,6 +18,7 @@ document.getElementById("fav__btn__wrapper").addEventListener("click", function 
     } else {
       e.target.classList.remove("vac__ico__selected");
       e.target.classList.add("vac__ico");
+      makeRequest();
     }
   }
 });

@@ -91,28 +91,28 @@ function makeRequest(body) {
    const lang_lev = createArr('user-info-block__lang__item__select');
 
    let body = {
-     user_position:document.getElementById('user__position').value,
-     user_industry:document.getElementById('user__industry').value,
-     user_salary:document.getElementById('user__salary').value,
-     user_registration:document.getElementById('user__registration').value,
-     user_exp:user_exp,
-     user_min_age:document.getElementById('user__age__min').value,
-     user_max_age:document.getElementById('user__age__max').value,
-     user_gender:user_gender,
-     user_education: user_education,
-     user_langs: {
+     position:document.getElementById('user__position').value,
+     sphere:document.getElementById('user__industry').value,
+     salary:document.getElementById('user__salary').value,
+     registration:document.getElementById('user__registration').value,
+     work_exp:user_exp,
+     min_age:document.getElementById('user__age__min').value,
+     max_age:document.getElementById('user__age__max').value,
+     gender:user_gender,
+     education: user_education,
+     langs: {
       lang:lang,
-      lang_lev:langlev,
+      lang_lev:lang_lev,
      },
      user_responssibilities: document.getElementById('user__job__resp').value,
-     user_work_conditions: document.getElementById('user__working__conditions').value,
-     user_busyness:user_busyness,
-     user_schedule:user_schedule,
-     user_addition_salary_info: document.getElementById('payment__additionally').value,
-     user_contacts: {
-      user_name: document.getElementById('user__name').value,
-      user_number: document.getElementById('user__number').value,
-      user_email: document.getElementById('user__email').value,
+     work_conditions: document.getElementById('user__working__conditions').value,
+     busyness:user_busyness,
+     schedule:user_schedule,
+     addition_salary_info: document.getElementById('payment__additionally').value,
+     contacts: {
+      name: document.getElementById('user__name').value,
+      phone_number: document.getElementById('user__number').value,
+      email: document.getElementById('user__email').value,
      },
    }
    makeRequest(body);
