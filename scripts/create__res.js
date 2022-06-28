@@ -326,27 +326,24 @@ document.getElementById("user__progs__btn__wrapper").addEventListener("click", f
 });
 const csrfmiddlewaretoken = document.getElementById('csrf-token').value;
 function goUrl(){
-  document.loacation.href = "ВСТАВЬ ССЫЛКУ ДЛЯ ПЕРЕХОДА";
+  document.location.href = "ВСТАВЬ ССЫЛКУ ДЛЯ ПЕРЕХОДА";
 }
 function makeRequest(body) {
   const xhr = new XMLHttpRequest();
-  xhr.open(`POST`, `ВСТАВЬ ССЫЛКУ`);
-  xhr.addEventListener("load", () => {
+  xhr.open( 'POST', 'https://jsonplaceholder.typicode.com/posts');
+  xhr.addEventListener('load', () => {
+    if (xhr.status !== 404) {
+      goUrl()
+    } else{
+      console.log('Got some err');
+    }
   });
   xhr.addEventListener("error", () => {
     console.log("error");
   });
-  xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8', csrfmiddlewaretoken);
+  xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8', "XSRF-TOKEN", csrfmiddlewaretoken);
   xhr.send(JSON.stringify(body));
-
-  if (xhr.status !== 404) {
-    goUrl()
-  } else{
-    console.log('Got some err');
-  }
 }
-
-
 
 let user_gender;
 let user_degree = [];
