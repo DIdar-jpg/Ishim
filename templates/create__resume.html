@@ -73,6 +73,7 @@
                <h1 class="reg-user-conf__title">Создание резюме</h1>
 
                <form action="" class="reg-user-conf__form">
+                  <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}">
                   <div class="user-full-name">
                      <div class="user-title">
                         <h2>Имя</h2>

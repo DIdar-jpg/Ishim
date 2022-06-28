@@ -31,6 +31,7 @@ document.getElementById("user__lang__btn__wrapper").addEventListener("click", fu
    }
  });
 
+const csrfmiddlewaretoken = document.getElementById('csrf-token').value;
 
 function makeRequest(body) {
    const xhr = new XMLHttpRequest();
@@ -40,6 +41,8 @@ function makeRequest(body) {
    xhr.addEventListener("error", () => {
      console.log("error");
    });
+   xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8', csrfmiddlewaretoken);
+
    xhr.send(JSON.stringify(body));
  }
 
@@ -104,7 +107,7 @@ function makeRequest(body) {
       lang:lang,
       lang_lev:lang_lev,
      },
-     user_responssibilities: document.getElementById('user__job__resp').value,
+     responssibilities: document.getElementById('user__job__resp').value,
      work_conditions: document.getElementById('user__working__conditions').value,
      busyness:user_busyness,
      schedule:user_schedule,

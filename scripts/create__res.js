@@ -324,6 +324,7 @@ document.getElementById("user__progs__btn__wrapper").addEventListener("click", f
   } else {
   }
 });
+const csrfmiddlewaretoken = document.getElementById('csrf-token').value;
 function goUrl(){
   document.loacation.href = "ВСТАВЬ ССЫЛКУ ДЛЯ ПЕРЕХОДА";
 }
@@ -335,7 +336,7 @@ function makeRequest(body) {
   xhr.addEventListener("error", () => {
     console.log("error");
   });
-  xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+  xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8', csrfmiddlewaretoken);
   xhr.send(JSON.stringify(body));
 
   if (xhr.status !== 404) {
@@ -418,10 +419,8 @@ document.getElementById('btn').addEventListener('click' , function(e) {
       position:user_exp_pos_arr,
       org_name:comp_name,
       responsibilities:user_exp_res,
-      start_month:user_exp_start_mon,
-      start_year:user_exp_start_year,
-      end_month:user_exp_end_mon || user_exp_work_pres,
-      end_year:user_exp_end_year || user_exp_work_pres,
+      start_year:`${user_exp_start_year}-${user_exp_start_mon}-01`,
+      end_year:`${user_exp_end_year}-${user_exp_end_mon}-01` || user_exp_work_pres,
     },
     education: {
       degree:user_degree,
