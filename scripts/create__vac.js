@@ -36,12 +36,14 @@ const csrfmiddlewaretoken = document.getElementById('csrf-token').value;
 function makeRequest(body) {
    const xhr = new XMLHttpRequest();
    xhr.open(`POST`, `ВСТАВЬ ССЫЛКУ`);
-   xhr.addEventListener("load", () => {
-   });
-   xhr.addEventListener("error", () => {
-     console.log("error");
-   });
-   xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8', csrfmiddlewaretoken);
+   xhr.addEventListener('load', () => {
+    if (xhr.status !== 404) {
+      goUrl()
+    } else{
+      console.log('Got some err');
+    }
+  });
+   xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8', "XSRF-TOKEN", csrfmiddlewaretoken);
 
    xhr.send(JSON.stringify(body));
  }
