@@ -7,10 +7,13 @@
 //   });
 //   xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
 //   xhr.send(JSON.stringify());
+//   if(httpRequest.status !== 404){
+//   console.log(JSON.stringify(body));
+//   }
 // }
 
 function makeRequest(url) {
-  var httpRequest = false;
+  let httpRequest = false;
 
   if (window.XMLHttpRequest) { // Mozilla, Safari, ...
       httpRequest = new XMLHttpRequest();
@@ -28,14 +31,12 @@ function makeRequest(url) {
       alert('got some err ');
       return false;
   }
-  httpRequest.open('POST', url, true);
-  let body =
-  {
-    text: "ССЫЛКА ХУИЛКА!!"
-  }
-  httpRequest.send(JSON.stringify(body));
+  console.log(httpRequest);
+  httpRequest.open('GET', url, true);
+  httpRequest.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+  httpRequest.send();
   if(httpRequest.status !== 404){
-    console.log(body);
+    console.log(JSON.stringify(body));
   }
 
 }
@@ -47,20 +48,28 @@ document.getElementById("article__btn__wrapper").addEventListener("click", funct
      if (e.target.classList.contains("vac__ico")) {
        e.target.classList.remove("vac__ico");
        e.target.classList.add("vac__ico__selected__purp");
-      //  const url = e.target.getAttribute("data-link");
-      makeRequest('https://jsonplaceholder.typicode.com/posts');
+       const url = e.target.getAttribute("data-link");
+       makeRequest(url);
      } else {
        e.target.classList.remove("vac__ico__selected__purp");
        e.target.classList.add("vac__ico");
-      //  const url = e.target.getAttribute("data-link");
-      makeRequest('https://jsonplaceholder.typicode.com/posts');
+       const url = e.target.getAttribute("data-link");
+       makeRequest(url);
      }
    }
  });
  document.getElementById("article__btn__wrapper").addEventListener("click", function (e) {
   const id = e.target.id;
   if (id == "share") {
-    // makeRequest();
+    const shareUrl = e.target.getAttribute("data-copy-link");
+    console.log(shareUrl); 
+    navigator.clipboard.writeText(shareUrl)
+    .then(() => {
+        console.log('Text copied to clipboard');
+    })
+    .catch(err => {
+        console.error('Error in copying text: ', err);
+    });
   }
 });
  

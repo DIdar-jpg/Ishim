@@ -30,25 +30,6 @@ document.getElementById("user__lang__btn__wrapper").addEventListener("click", fu
    }
  });
 
-const csrfmiddlewaretoken = document.getElementById('csrf-token').value;
-
-function makeRequest(body) {
-   const xhr = new XMLHttpRequest();
-   xhr.open(`POST`, `ВСТАВЬ ССЫЛКУ`);
-   xhr.addEventListener('load', () => {
-    if (xhr.status !== 404) {
-      goUrl()
-    } else{
-      console.log('Got some err');
-    }
-  });
-   xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8', "XSRF-TOKEN", csrfmiddlewaretoken);
-
-   xhr.send(JSON.stringify(body));
- }
-
-
-
 //  let user_gender;
 //  let user_exp;
 //  let user_education;

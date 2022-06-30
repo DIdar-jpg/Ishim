@@ -1,12 +1,27 @@
 function makeRequest(url) {
-  const xhr = new XMLHttpRequest();
-  xhr.open(`POST`, `${url}`);
+  let httpRequest = false;
 
-  xhr.addEventListener("error", () => {
-    console.log("error");
-  });
-  xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8', "XSRF-TOKEN", csrfmiddlewaretoken);
-  xhr.send(JSON.stringify());
+  if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+      httpRequest = new XMLHttpRequest();
+  } else if (window.ActiveXObject) { // IE
+      try {
+          httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+      } catch (e) {
+          try {
+              httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+          } catch (e) {}
+      }
+  }
+
+  if (!httpRequest) {
+      alert('got some err ');
+      return false;
+  }
+  console.log(httpRequest);
+  httpRequest.open('GET', url, true);
+  httpRequest.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+  httpRequest.send();
+
 }
 document.getElementById("fav__btn__wrapper").addEventListener("click", function (e) {
   const tagName = e.target.tagName;
