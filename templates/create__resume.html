@@ -72,23 +72,23 @@
             <div class="reg-user-conf__content">
                <h1 class="reg-user-conf__title">Создание резюме</h1>
 
-               <form action="" class="reg-user-conf__form">
+               <form action="" method="post" class="reg-user-conf__form">
                   <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}">
                   <div class="user-full-name">
                      <div class="user-title">
                         <h2>Имя</h2>
                         <h2>Фамилия</h2>
                      </div>
-                     <input required type="text" class="user-name" value="" name="user__name" id="user__name">
+                     <input required type="text" class="user-name" value="" name="first_name" id="user__name">
 
-                     <input required type="text" class="user-surname" value="" name="user__surname" id="user__surname">
+                     <input required type="text" class="user-surname" value="" name="last_name" id="user__surname">
                   </div>
 
                   <div class="user-birth-date">
                      <h2>Дата рождения</h2>
-                     <input required type="tel" class="user-bd__date user-bd__item" name="user__bd__date"
+                     <input required type="tel" class="user-bd__date user-bd__item" name="birth_date"
                         id="user__bd__date" value="" placeholder="03">
-                     <select required name="user__bd__mon" id="user__bd__mon" class="user-bd__item user-select-bg">
+                     <select required name="birth_date__mon" id="user__bd__mon" class="user-bd__item user-select-bg">
                         <option value="01">Январь</option>
                         <option value="02">Февраль</option>
                         <option selected value="03">Март</option>
@@ -103,7 +103,7 @@
                         <option value="12">Декабрь</option>
                      </select>
 
-                     <select required name="user__bd__year" id="user__bd__year" class="user-bd__item user-select-bg">
+                     <select required name="birth_date__year" id="user__bd__year" class="user-bd__item user-select-bg">
                         <option value="2004">2004</option>
                         <option value="2003">2003</option>
                         <option selected value="2002">2002</option>
@@ -163,16 +163,16 @@
                            Укажите номер по которому лучше всего можно связаться с вами
                         </p>
                      </div>
-                     <input required type="tel" class="user-text" value="+993 " name="user__number" id="user__number">
+                     <input required type="tel" class="user-text" value="+993 " name="phone_number" id="user__number">
                   </div>
 
                   <div class="user-info-block">
                      <h2>Эл. почта</h2>
-                     <input type="text" class="user-text" value="" name="user__email" id="user__email">
+                     <input type="text" class="user-text" value="" name="email" id="user__email">
                   </div>
                   <div class="user-info-block" id="user__registration__wrapper">
                      <h2>Прописка</h2>
-                     <select name="user__registration" id="user__registration" class="user-text user-select-bg">
+                     <select name="registration" id="user__registration" class="user-text user-select-bg">
                         <option slected value="ag">Ашхабад</option>
                         <option value="annau">Аннау</option>
                         <option value="baharden">Бахарден</option>
@@ -189,10 +189,10 @@
                   <div class="user-info-block">
                      <h2>Пол</h2>
                      <div class="user-gender-block" id="gender__block__wrapper">
-                        <input required type="radio" id="man-id" value="man" name="user-gen">
+                        <input required type="radio" id="man-id" value="man" name="gender">
                         <label for="man-id" class="user-gender">Мужчина</label>
 
-                        <input required type="radio" id="woman-id" value="woman" name="user-gen">
+                        <input required type="radio" id="woman-id" value="woman" name="gender">
                         <label for="woman-id" class="user-gender">Женщина</label>
                      </div>
                   </div>
@@ -201,14 +201,14 @@
                      <h2 class="fw500">Должность</h2>
                      <h3>Какую профессию вы ищете?</h3>
                      <div class="user-inp-blok">
-                        <input required type="text" class="user-text" value="" placeholder="" name="user__position"
+                        <input required type="text" class="user-text" value="" placeholder="" name="position"
                            id="user__position">
                      </div>
                   </div>
 
                   <div class="user-info-block" id="industry__wrapper">
                      <h2 class="fw500">Сфера деятельности</h2>
-                     <select required name="user__industry" id="user__industry" class="user-text user-select-bg">
+                     <select required name="sphere" id="user__industry" class="user-text user-select-bg">
                         <option value="">SomeIndustry</option>
                         <option value="">SomeIndustry</option>
                         <option value="">SomeIndustry</option>
@@ -235,23 +235,23 @@
                      <h2>Зарплата</h2>
                      <div class="user-inp-blok">
                         <input required type="text" class="user-text" value="" placeholder="Укажите желаемую зарплату"
-                           name="user__salary" id="user__salary">
+                           name="min_salary" id="user__salary">
                      </div>
                   </div>
 
                   <div class="user-info-block">
                      <h2 class="fw500">Занятость</h2>
                      <div class="user__exp__block" id="user__busyness__wrapper">
-                        <input required type="radio" id="empl1" value="empl1" name="user__employment">
+                        <input required type="radio" id="empl1" value="empl1" name="busyness">
                         <label for="empl1" class="user__exp__item">полная занятость</label>
 
-                        <input required type="radio" id="empl2" value="empl2" name="user__employment">
+                        <input required type="radio" id="empl2" value="empl2" name="busyness">
                         <label for="empl2" class="user__exp__item">проектная работа</label>
 
-                        <input required type="radio" id="empl3" value="empl3" name="user__employment">
+                        <input required type="radio" id="empl3" value="empl3" name="busyness">
                         <label for="empl3" class="user__exp__item">частная занятость</label>
 
-                        <input required type="radio" id="empl4" value="empl4" name="user__employment">
+                        <input required type="radio" id="empl4" value="empl4" name="busyness">
                         <label for="empl4" class="user__exp__item">стажировка</label>
                      </div>
                   </div>
@@ -259,16 +259,16 @@
                   <div class="user-info-block">
                      <h2 class="fw500">График работы</h2>
                      <div class="user__exp__block" id="user__schedule__wrapper">
-                        <input required type="radio" id="schedule1" value="schedule1" name="user__scedual">
+                        <input required type="radio" id="schedule1" value="schedule1" name="schedule">
                         <label for="schedule1" class="user__exp__item">полный рабочий день</label>
 
-                        <input required type="radio" id="schedule2" value="schedule2" name="user__scedual">
+                        <input required type="radio" id="schedule2" value="schedule2" name="schedule">
                         <label for="schedule2" class="user__exp__item">сменный график</label>
 
-                        <input required type="radio" id="schedule3" value="schedule3" name="user__scedual">
+                        <input required type="radio" id="schedule3" value="schedule3" name="schedule">
                         <label for="schedule3" class="user__exp__item">гибкий график</label>
 
-                        <input required type="radio" id="schedule4" value="schedule4" name="user__scedual">
+                        <input required type="radio" id="schedule4" value="schedule4" name="schedule">
                         <label for="schedule4" class="user__exp__item">удаленная работа</label>
                      </div>
                   </div>
@@ -279,21 +279,20 @@
                         <div>
                            <h2 class="fw500">Опыт работы</h2>
                            <h2>Какую должность вы занимали?</h2>
-                           <input type="text" class="user-text user__txt__exp__pos" value="" name="user__last__pos">
+                           <input type="text" class="user-text user__txt__exp__pos" value="" name="position">
 
                            <h2>Как называлсь организация?</h2>
-                           <input type="text" class="user-text user__last__comp__name__exp" value=""
-                              name="user__last__comp__name">
+                           <input type="text" class="user-text user__last__comp__name__exp" value="" name="org_name">
 
                            <h2 class="fw500 user-info-block-title">Обязанности</h2>
                            <div class="user__info__block__txt__area__wrapper">
-                              <textarea name="job__resp" id="job__resp"
+                              <textarea name="responsibilities" id="job__resp"
                                  class="user-info-block-txtarea user__response__exp"
                                  placeholder="Расскажите обязанности и задачи которые вы выполняли на рабочем месте"></textarea>
                            </div>
                            <div class="user__time">
                               <h2>Начало работы</h2>
-                              <select name="user__exp__time__start__mon" id="user__exp__time__start__mon"
+                              <select name="start__mon" id="user__exp__time__start__mon"
                                  class="user__time__item user-select-bg user__time__start__mon__exp">
                                  <option value="01">Январь</option>
                                  <option value="02">Февраль</option>
@@ -311,7 +310,7 @@
 
                               <div class="horizontal__row"></div>
 
-                              <select name="user__exp__time__start__year" id="user__exp__time__start__year"
+                              <select name="start_year" id="user__exp__time__start__year"
                                  class="user__time__item user-select-bg user__time__start__year__exp">
                                  <option value="2004">2004</option>
                                  <option value="2003">2003</option>
@@ -348,7 +347,7 @@
 
                            <div class="user__time">
                               <h2>Окончание работы</h2>
-                              <select name="user__exp__time__end__mon" id="user__exp__time__end__mon"
+                              <select name="end__mon" id="user__exp__time__end__mon"
                                  class="user__time__item user-select-bg user__time__end__mon__exp">
                                  <option value="Jan">Январь</option>
                                  <option value="Feb">Февраль</option>
@@ -366,7 +365,7 @@
 
                               <div class="horizontal__row"></div>
 
-                              <select name="user__exp__time__end__year" id="user__exp__time__end__year"
+                              <select name="end_year" id="user__exp__time__end__year"
                                  class="user__time__item user-select-bg user__time__end__year__exp">
                                  <option value="2004">2004</option>
                                  <option value="2003">2003</option>
@@ -425,39 +424,39 @@
                         <div class="user__educ__wrapper" id="user__educ__wrap">
                            <h2 class="fw500">Образование</h2>
                            <div class="user__exp__block" id="user__education__wrapper">
-                              <input required type="radio" id="educ1" value="educ1" name="user__edu">
+                              <input required type="radio" id="educ1" value="educ1" name="degree">
                               <label for="educ1" class="user__exp__item">среднее</label>
-                              <input required type="radio" id="educ2" value="educ2" name="user__edu">
+                              <input required type="radio" id="educ2" value="educ2" name="degree">
                               <label for="educ2" class="user__exp__item">средне-специальное</label>
-                              <input required type="radio" id="educ3" value="educ3" name="user__edu">
+                              <input required type="radio" id="educ3" value="educ3" name="degree">
                               <label for="educ3" class="user__exp__item">неоконченное высшее</label>
-                              <input required type="radio" id="educ4" value="educ4" name="user__edu">
+                              <input required type="radio" id="educ4" value="educ4" name="degree">
                               <label for="educ4" class="user__exp__item">высшее</label>
-                              <input required type="radio" id="educ5" value="educ4" name="user__edu">
+                              <input required type="radio" id="educ5" value="educ4" name="degree">
                               <label for="educ5" class="user__exp__item">высшее</label>
-                              <input required type="radio" id="educ6" value="educ5" name="user__edu">
+                              <input required type="radio" id="educ6" value="educ5" name="degree">
                               <label for="educ6" class="user__exp__item">магистр</label>
-                              <input required type="radio" id="educ7" value="educ6" name="user__edu">
+                              <input required type="radio" id="educ7" value="educ6" name="degree">
                               <label for="educ7" class="user__exp__item">кандидат наук</label>
-                              <input required type="radio" id="educ8" value="educ7" name="user__edu">
+                              <input required type="radio" id="educ8" value="educ7" name="degree">
                               <label for="educ8" class="user__exp__item">доктор наук</label>
                            </div>
 
 
                            <h2>Учебное заведение</h2>
-                           <input type="text" class="user-text user__edu__instance" value="" name="user__edu__inst"
+                           <input type="text" class="user-text user__edu__instance" value="" name="establishment"
                               id="user__edu__inst">
 
 
 
 
                            <h2>Факультет</h2>
-                           <input type="text" class="user-text" value="" name="user__faculty" id="user__faculty">
+                           <input type="text" class="user-text" value="" name="faculty" id="user__faculty">
 
 
 
                            <h2>Специализация</h2>
-                           <input type="text" class="user-text user__specialize" value="" name="user__spec"
+                           <input type="text" class="user-text user__specialize" value="" name="specialization"
                               id="user__spec">
 
 
@@ -468,7 +467,7 @@
                                  <h2>Год окончания</h2>
                               </div>
                               <div class="user__time__inner">
-                                 <select name="user__time__educ__start__year" id="user__time__educ__start__year"
+                                 <select name="start_year" id="user__time__educ__start__year"
                                     class="user__time__item user-select-bg user__time__start__year__educ">
                                     <option value="2004">2004</option>
                                     <option value="2003">2003</option>
@@ -505,7 +504,7 @@
                                  <div class="horizontal__row"></div>
 
 
-                                 <select name="user__time__educ__end__year" id="user__time__educ__end__year"
+                                 <select name="end_year" id="user__time__educ__end__year"
                                     class="user__time__item user-select-bg user__time__start__year__educ">
                                     <option value="2004">2004</option>
                                     <option value="2003">2003</option>
@@ -552,7 +551,7 @@
                      <h2>Знание программ</h2>
 
                      <div id="user__progs__wrapper">
-                        <input type="text" class="user-text user__progs" value="" name="user__prog" id="user__prog"
+                        <input type="text" class="user-text user__progs" value="" name="progs" id="user__prog"
                            placeholder="1С">
                      </div>
                      <div class="add__lang">
@@ -571,9 +570,9 @@
                         </div>
 
                         <div class="user-info-block__lang__item">
-                           <input type="text" class="user-info-block__lang__item__txt" name="user__lang" id="user__lang"
+                           <input type="text" class="user-info-block__lang__item__txt" name="lang" id="user__lang"
                               placeholder="Туркменский">
-                           <select name="lang__lev" id="lang__lev" class="user-info-block__lang__item__select">
+                           <select name="lang_lev" id="lang__lev" class="user-info-block__lang__item__select">
                               <option value="ll1">Базовый</option>
                               <option value="ll2">Продвинутый</option>
                               <option value="ll3">Свободно</option>
@@ -594,7 +593,7 @@
                         О себе
                      </h2>
                      <div class="user__info__block__txt__area__wrapper">
-                        <textarea name="user__about" id="user__about" class="user-info-block-txtarea"
+                        <textarea name="about" id="user__about" class="user-info-block-txtarea"
                            placeholder="Расскажите о своих знаниях, навыках и личных качествах, которые могут быть поезны работодателям"></textarea>
                      </div>
                   </div>

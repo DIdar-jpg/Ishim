@@ -2398,7 +2398,7 @@ reg-h-t = registration-hirer-type
 }
 
 .fav__article {
-	width: 70%;
+	width: 60%;
 	display: flex;
 	align-items: center;
 	padding: 20px;
@@ -2855,8 +2855,19 @@ reg-h-t = registration-hirer-type
 
 .advance__s__inner {
 	width: 100%;
-	max-width: 600px;
+	max-width: 800px;
+	margin: 0 auto;
 
+}
+
+.fav__article__section:first-child {
+	width: 20%;
+}
+
+.fav__article__pic {}
+
+.fav__article__section:last-child {
+	width: 80%;
 }
 
 @media(max-width:1340px) {
@@ -4015,5 +4026,24 @@ reg-h-t = registration-hirer-type
 
 	.e__v__vac__item {
 		width: 100%;
+	}
+
+	.fav__article__section:first-child {
+		width: 80px;
+		margin-right: 10px;
+	}
+
+	.fav__article__pic {
+		width: 80px;
+		height: 80px;
+	}
+
+	.fav__article__section:last-child {
+		width: 70%;
+	}
+
+
+	.fav__article__section__top .article__subtitle {
+		margin-right: 10px;
 	}
 }
