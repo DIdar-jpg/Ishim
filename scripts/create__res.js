@@ -20,7 +20,7 @@ document.getElementById("user__exp__btn__wrap").addEventListener("click", functi
         </div>
         <div class="user__time">
             <h2>Начало работы</h2>
-            <select name="start__mon" id="user__exp__time__start__mon"
+            <select name="exp_start__month" id="user__exp__time__start__mon"
               class="user__time__item user-select-bg user__time__start__mon__exp">
               <option value="01">Январь</option>
               <option value="02">Февраль</option>
@@ -38,7 +38,7 @@ document.getElementById("user__exp__btn__wrap").addEventListener("click", functi
 
             <div class="horizontal__row"></div>
 
-            <select name="start_year" id="user__exp__time__start__year"
+            <select name="exp_start__year" id="user__exp__time__start__year"
               class="user__time__item user-select-bg user__time__start__year__exp">
               <option value="2004">2004</option>
               <option value="2003">2003</option>
@@ -75,7 +75,7 @@ document.getElementById("user__exp__btn__wrap").addEventListener("click", functi
 
         <div class="user__time">
             <h2>Окончание работы</h2>
-            <select name="end__mon" id="user__exp__time__end__mon"
+            <select name="exp_end__month" id="user__exp__time__end__mon"
               class="user__time__item user-select-bg user__time__end__mon__exp">
               <option value="Jan">Январь</option>
               <option value="Feb">Февраль</option>
@@ -93,7 +93,7 @@ document.getElementById("user__exp__btn__wrap").addEventListener("click", functi
 
             <div class="horizontal__row"></div>
 
-            <select name="end_year" id="user__exp__time__end__year"
+            <select name="exp_end__year" id="user__exp__time__end__year"
               class="user__time__item user-select-bg user__time__end__year__exp">
               <option value="2004">2004</option>
               <option value="2003">2003</option>
@@ -158,14 +158,14 @@ document.getElementById("user__lang__btn__wrapper").addEventListener("click", fu
     </div>
 
     <div class="user-info-block__lang__item">
-       <input type="text" class="user-info-block__lang__item__txt" name="lang" id="user__lang"
+       <input type="text" class="user-info-block__lang__item__txt" name="language" id="user__lang"
           placeholder="Туркменский">
-       <select name="lang_lev" id="lang__lev" class="user-info-block__lang__item__select">
-          <option value="ll1">Базовый</option>
-          <option value="ll2">Продвинутый</option>
-          <option value="ll3">Свободно</option>
-          <option value="ll4">Совершенный</option>
-          <option value="ll5">Профильный</option>
+       <select name="lang__lev" id="lang__lev" class="user-info-block__lang__item__select">
+          <option value="Базовый">Базовый</option>
+          <option value="Продвинутый">Продвинутый</option>
+          <option value="Свободно">Свободно</option>
+          <option value="Совершенный">Совершенный</option>
+          <option value="Профильный">Профильный</option>
        </select>
     </div>`
     document.getElementById("user__lang__wrap").appendChild(div);
@@ -185,21 +185,21 @@ document.getElementById("user__educ__btn__wrap").addEventListener("click", funct
     div.innerHTML = `                           
     <h2 class="fw500">Образование</h2>
     <div class="user__exp__block" id="user__education__wrapper">
-       <input required type="radio" id="educ1${nameNum}" value="educ1" name="degree${nameNum}">
+       <input required type="radio" id="educ1${nameNum}" value="среднее" name="edu_degrees${nameNum}">
        <label for="educ1${nameNum}" class="user__exp__item">среднее</label>
-       <input required type="radio" id="educ2${nameNum}" value="educ2" name="degree${nameNum}">
+       <input required type="radio" id="educ2${nameNum}" value="средне-специальное" name="edu_degrees${nameNum}">
        <label for="educ2${nameNum}" class="user__exp__item">средне-специальное</label>
-       <input required type="radio" id="educ3${nameNum}" value="educ3" name="degree${nameNum}">
+       <input required type="radio" id="educ3${nameNum}" value="educ3" name="edu_degrees${nameNum}">
        <label for="educ3${nameNum}" class="user__exp__item">неоконченное высшее</label>
-       <input required type="radio" id="educ4${nameNum}" value="educ4" name="degree${nameNum}">
+       <input required type="radio" id="educ4${nameNum}" value="educ4" name="edu_degrees${nameNum}">
        <label for="educ4${nameNum}" class="user__exp__item">высшее</label>
-       <input required type="radio" id="educ5${nameNum}" value="educ4" name="degree${nameNum}">
+       <input required type="radio" id="educ5${nameNum}" value="educ4" name="edu_degrees${nameNum}">
        <label for="educ5${nameNum}" class="user__exp__item">высшее</label>
-       <input required type="radio" id="educ6${nameNum}" value="educ5" name="degree${nameNum}">
+       <input required type="radio" id="educ6${nameNum}" value="educ5" name="edu_degrees${nameNum}">
        <label for="educ6${nameNum}" class="user__exp__item">магистр</label>
-       <input required type="radio" id="educ7${nameNum}" value="educ6" name="degree${nameNum}">
+       <input required type="radio" id="educ7${nameNum}" value="educ6" name="edu_degrees${nameNum}">
        <label for="educ7${nameNum}" class="user__exp__item">кандидат наук</label>
-       <input required type="radio" id="educ8${nameNum}" value="educ7" name="degree${nameNum}">
+       <input required type="radio" id="educ8${nameNum}" value="educ7" name="edu_degrees${nameNum}">
        <label for="educ8${nameNum}" class="user__exp__item">доктор наук</label>
     </div>
 
@@ -228,7 +228,7 @@ document.getElementById("user__educ__btn__wrap").addEventListener("click", funct
           <h2>Год окончания</h2>
        </div>
        <div class="user__time__inner">
-          <select name="start_year" id="user__time__educ__start__year"
+          <select name="start_year_edu" id="user__time__educ__start__year"
              class="user__time__item user-select-bg user__time__start__year__educ">
              <option value="2004">2004</option>
              <option value="2003">2003</option>
@@ -265,7 +265,7 @@ document.getElementById("user__educ__btn__wrap").addEventListener("click", funct
           <div class="horizontal__row"></div>
 
 
-          <select name="end_year" id="user__time__educ__end__year"
+          <select name="end_year_edu" id="user__time__educ__end__year"
              class="user__time__item user-select-bg user__time__start__year__educ">
              <option value="2004">2004</option>
              <option value="2003">2003</option>
@@ -315,7 +315,7 @@ document.getElementById("user__progs__btn__wrapper").addEventListener("click", f
   const div = document.createElement('div');
   if (id == "addnew") {
     div.innerHTML = `                           
-    <input type="text" class="user-text user__progs" value="" name="user__prog${nameNum}" id="user__prog${nameNum}">`
+    <input type="text" class="user-text user__progs" value="" name="program" id="user__prog">`
     document.getElementById("user__progs__wrapper").appendChild(div);
     console.log(div);
     nameNum++;
@@ -422,11 +422,11 @@ const selectIndustry = document.getElementById('user__industry');
 selectIndustry.addEventListener('change' , (e) => {
   let index =  selectIndustry.selectedIndex;
   console.log(index);
-  if(index == 4) {
-   selectIndustry.classList.add('disappear');
+  if(index == 14) {
+    document.getElementById('industry__wrapper').removeChild(selectIndustry);
      const div = document.createElement('div');
      div.className = 'user-inp-blok';
-     div.innerHTML = `<input required type="text" class="user-text" value="" placeholder="Другое" name="anotherIndustry" id="anotherIndustryId">`
+     div.innerHTML = `<input required type="text" class="user-text" value="" placeholder="Другое" name="sphere" id="anotherIndustryId">`
      document.getElementById('industry__wrapper').appendChild(div);
   }
 });

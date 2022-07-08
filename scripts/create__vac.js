@@ -11,14 +11,14 @@ document.getElementById("user__lang__btn__wrapper").addEventListener("click", fu
       </div>
 
       <div class="user-info-block__lang__item">
-        <input type="text" class="user-info-block__lang__item__txt" name="lang" id="user__lang"
+        <input type="text" class="user-info-block__lang__item__txt" name="language" id="user__lang"
         placeholder="Туркменский">
-        <select name="lang_lev" id="lang__lev" class="user-info-block__lang__item__select">
-          <option value="ll1">Базовый</option>
-          <option value="ll2">Продвинутый</option>
-          <option value="ll3">Говорю свободно</option>
-          <option value="ll4">В совершенстве</option>
-          <option value="ll5">Профильный</option>
+        <select name="lang__lev" id="lang__lev" class="user-info-block__lang__item__select">
+          <option value="Базовый">Базовый</option>
+          <option value="Продвинутый">Продвинутый</option>
+          <option value="Свободно">Говорю свободно</option>
+          <option value="Совершенный">В совершенстве</option>
+          <option value="Профильный">Профильный</option>
         </select>
       </div>`
      document.getElementById("user__lang__wrap").appendChild(div);
@@ -104,15 +104,15 @@ document.getElementById("user__lang__btn__wrapper").addEventListener("click", fu
 //    console.log(body);
 //  });
 
-const select = document.getElementById('user__industry');
-select.addEventListener('change' , (e) => {
-   let index =  select.selectedIndex;
+const selectIndustry = document.getElementById('user__industry');
+selectIndustry.addEventListener('change' , (e) => {
+   let index =  selectIndustry.selectedIndex;
    console.log(index);
-   if(index == 4) {
-      select.classList.add('disappear');
+   if(index == 14) {
+    document.getElementById('industry__wrapper').removeChild(selectIndustry);
       const div = document.createElement('div');
       div.className = 'user-inp-blok';
-      div.innerHTML = `<input required type="text" class="user-text" value="" placeholder="Другое" name="anotherIndustry" id="anotherIndustryId">`
+      div.innerHTML = `<input required type="text" class="user-text" value="" placeholder="Другое" name="sphere" id="anotherIndustryId">`
       document.getElementById('industry__wrapper').appendChild(div);
    }
 })

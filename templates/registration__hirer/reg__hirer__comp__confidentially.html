@@ -52,12 +52,22 @@
                   </div>
                   <div class="user-info-block" id="industry__wrapper">
                      <h2>Отрасль</h2>
-                     <select required name="user__industry" id="user__industry" class="user-text user-select-bg">
-                        <option value="">SomeIndustry</option>
-                        <option value="">SomeIndustry</option>
-                        <option value="">SomeIndustry</option>
-                        <option value="">SomeIndustry</option>
-                        <option value="">Другое</option>
+                     <select required name="sphere" id="user__industry" class="user-text user-select-bg">
+                        <option value="IT, Дизайн">IT, Дизайн</option>
+                        <option value="Финансы, бухгалтерия">Финансы, бухгалтерия</option>
+                        <option value="Искусство, развлечения, СМИ">Искусство, развлечения, СМИ</option>
+                        <option value="Красота, спорт">Красота, спорт</option>
+                        <option value="Логистика">Логистика</option>
+                        <option value="Маркетинг, Торговля, PR, CMM">Маркетинг, Торговля, PR, CMM</option>
+                        <option value="Медицина">Медицина</option>
+                        <option value="Энергетика">Энергетика</option>
+                        <option value="Образование">Образование</option>
+                        <option value="Охрана, безопасность">Охрана, безопасность</option>
+                        <option value="Строительство">Строительство</option>
+                        <option value="Туризм">Туризм</option>
+                        <option value="Обслуживание оборудования">Обслуживание оборудования</option>
+                        <option value="Юриспруденция">Юриспруденция</option>
+                        <option value="Другое">Другое</option>
                      </select>
                   </div>
 
@@ -69,18 +79,18 @@
                            Укажите номер по которому лучше всего можно связаться с вами
                         </p>
                      </div>
-                     <input required type="tel" class="user-text" value="+993" name="user__num">
+                     <input required type="tel" class="user-text" value="+993" name="mobile_num">
                   </div>
 
                   <div class="user-info-block">
                      <h2>Эл. почта</h2>
-                     <input required type="text" class="user-text" value="" name="user__mail">
+                     <input required type="text" class="user-text" value="" name="email">
                   </div>
 
                   <div class="user-info-block">
                      <h2>Пароль</h2>
                      <div class="user-inp-blok">
-                        <input type="password" class="user-text" value="" name="user__pass">
+                        <input type="password" class="user-text" value="" name="password">
                         <img src="../../src/images/close__eye.svg" alt="" class="user-block-pic" id="eye__btn">
                      </div>
 
@@ -88,33 +98,33 @@
                   <div class="user-info-block">
                      <h2>Подтверждение пароля</h2>
                      <div class="user-inp-blok">
-                        <input type="password" class="user-text" value="" name="user__pass__check">
+                        <input type="password" class="user-text" value="" name="password__check">
                         <img src="../../src/images/close__eye.svg" alt="" class="user-block-pic" id="eye__btn">
                      </div>
                   </div>
 
                   <div class="user-info-block" id="city__wrapper">
                      <h2>Город проживания</h2>
-                     <select required name="user__city" id="user__city" class="user-text user-select-bg">
-                        <option slected value="ag">Ашхабад</option>
-                        <option value="annau">Аннау</option>
-                        <option value="baharden">Бахарден</option>
-                        <option value="bizmein">Бизмеин</option>
-                        <option value="gektepe">Гёкдепе</option>
-                        <option value="kahka">Кахка</option>
-                        <option value="tedjen">Теджен</option>
-                        <option value="balkanabad">Балканабад</option>
-                        <option value="bereket">Берекет</option>
-                        <option value="anothr__city">Другой город</option>
+                     <select required name="city" id="user__city" class="user-text user-select-bg">
+                        <option slected value="Ашхабад">Ашхабад</option>
+                        <option value="Аннау">Аннау</option>
+                        <option value="Бахарден">Бахарден</option>
+                        <option value="Бизмеин">Бизмеин</option>
+                        <option value="Гёкдепе">Гёкдепе</option>
+                        <option value="Кахка">Кахка</option>
+                        <option value="Теджен">Теджен</option>
+                        <option value="Балканабад">Балканабад</option>
+                        <option value="Берекет">Берекет</option>
+                        <option value="Другой город">Другой город</option>
                      </select>
                   </div>
                   <div class="user-info-block">
                      <h2>Пол</h2>
                      <div class="user-gender-block">
-                        <input required type="radio" id="man-id" value="man" name="user-gen">
+                        <input required type="radio" id="man-id" value="Мужчина" name="gender">
                         <label for="man-id" class="user-gender">Мужчина</label>
 
-                        <input required type="radio" id="woman-id" value="woman" name="user-gen">
+                        <input required type="radio" id="woman-id" value="Женщина" name="gender">
                         <label for="woman-id" class="user-gender">Женщина</label>
                      </div>
                   </div>

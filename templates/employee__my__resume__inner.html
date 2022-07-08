@@ -1,149 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="stylesheet" href="../main.css">
-      <title>My Resume page</title>
-   </head>
-   <body>
-      <div class="container__main pad-0 w-1920">
-         <header class="header">
-            <div class="container__content">
-               <div class="header__content">         
-                  <section class="header__sec__type3 ">
-                     <img src="../src/images/header/Ishim__logo.png" alt="" class="header__pic ">
-                     
-                  </section>
-                  <section class="header__sec__type3">
-                     <form action="">
-                        <div class="nav">
-                           <img src="../src/images/search__ic.svg" alt="Sorry">
-                              <input type="text" class="nav__inp" placeholder="Профессия, должность или ключевые слова">
-                              <input type="text" class="nav__inp__small" placeholder="Профессия">
-                        </div>
-                     <a href="">
-                        <img src="../src/images/nav__setting.png" 
-                        alt="Sorry" class="nav__set__pic">
-                     </a>
-                     </form>
-                  </section>
-   
-                  <section class="header__sec__type3">
-                     <a href="" class="header__user__pic">
-                        <img src="../src/images/user__def__ic.png" alt="Sorry">
-                     </a>
-                     <button class="hamburger hamburger-line">
-                        <span></span>
-                     </button>
-                  </section>
-               </div>
-            </div>
-         </header>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="stylesheet" href="../main.css">
+   <title>My Resume page</title>
+</head>
+
+<body>
+   <div class="container__main pad-0 w-1920">
+      <header class="header">
          <div class="container__content">
-            <div class="nav__burger disappear">
-               <h1 class="nav__title">Меню</h1>
-      
-               <a href="" class="nav__link">Каталог компаний</a>
-      
-               <a href="" class="nav__link">Статьи</a>
-   
-               <select name="interface__lang" onchange="window.location.href=this.options[this.selectedIndex].value" class="nav__link">
-                  <option selected disabled hidden class="header__loc__current">Язык</option>
-                  <option value="" class="header__loc__current">RU</option>
-                  <option value="" class="header__loc__current">TM</option>
-               </select>
-   
-               <a href="" class="nav__link">История поиска</a>
-      
-               <a href="" class="nav__link">Условия использования и политика конфиденциальности</a>
-      
-               <a href="" class="nav__link">Связаться с нами</a>
+            <div class="header__content">
+               <section class="header__sec__type3 ">
+                  <img src="../src/images/header/Ishim__logo.png" alt="" class="header__pic ">
+
+               </section>
+               <section class="header__sec__type3">
+                  <form action="">
+                     <div class="nav">
+                        <button type="submit" name="search_btn">
+                           <img src="../src/images/search__ic.svg" alt="Sorry">
+                        </button>
+                        <input type="text" class="nav__inp" placeholder="Профессия, должность или ключевые слова">
+                        <input type="text" class="nav__inp__small" placeholder="Профессия">
+                     </div>
+                     <a href="">
+                        <img src="../src/images/nav__setting.png" alt="Sorry" class="nav__set__pic">
+                     </a>
+                  </form>
+               </section>
+
+               <section class="header__sec__type3">
+                  <div class="header__user__pic__wrap">
+                     <img src="../src/images/user__def__ic.png" alt="Sorry" class="header__user__pic">
+                  </div>
+                  <button class="hamburger hamburger-line">
+                     <span></span>
+                  </button>
+               </section>
             </div>
          </div>
-         <div class="container__content">
-            <div class="my__vac__view">
-               <h1 class="mvv__headline">Моё резюме</h1>
-               <h3 class="mvv__subtitle">Максат Фархатов</h3>
-               <span class="mvv__main__info">Мужчина, 30 лет</span>
-               <span class="mvv__main__info">Стаж работы 4 года</span>
-               <span class="mvv__main__info">г. Ашхабад</span>
-               <span class="mvv__main__info">+99363223334</span>
-               <span class="mvv__main__info">maksatft@gmail.com</span>
-               <span class="mvv__main__info">Опубликовано в 16:42</span>
-               <span class="mvv__main__info">27 просмотров</span>
-               <button class="mvv__refresh__in__search__btn green__btn">Обновить в поиске</button>
-               <a href="" class="mvv__edit__btn purp__btn">Редактировать</a>
-               <h4 class="mvv__subtitle">Главный бухгалтер
-               </h4>
-               <p class="mvv__info">
-                  <span>Бухгалтерия, финансы предприятия</span>
-                  
-                  <span>График работы: Сменный график</span>
-                
-                  <span>Пол: не имеет значения</span>
-                  
-                  <span>Занятость:  Полная занятость</span>
-               </p>
-               <h4 class="mvv__subtitle">Опыт работы</h4>
-               <p class="mvv__info">
-                  <span>Помощник бухгалтера</span>
-                  
-                  <span>Организация ABC Holdings, г. Ашхабад</span>
-                  
-                  <span>Март 2020 - Ноябрь 2021</span>
-               </p>
-               <h4 class="mvv__subtitle">Обязанности:</h4>
-               <p class="mvv__info">
-                  Работа с первичными документами.
-                  Подготовка управленческой отчетности.
-                  Работа с банковскими счетами организации, которая заключается в выверке и разнесении информации по бухгалтерским счетам.
-                  Составление и предоставление платежных поручений в банк.
-               </p>
-               <h4 class="mvv__subtitle">Образование
-               </h4>
-               <p class="mvv__info">
-                  <span>
-                     Высшее образование
-                  </span>
-                  
-                  <span>Международный Университет Гуманитарных Наук и Развития, г. Ашхабад</span>
-                  
-                  <span>Сентябрь 2015 - Июль 2020</span>
+      </header>
+      <div class="container__content">
+         <div class="nav__burger disappear">
+            <h1 class="nav__title">Меню</h1>
 
-                  <span>Факультет: Международная экономика</span>
+            <a href="" class="nav__link">Каталог компаний</a>
 
-                  <span>Специальность: Экономист</span>
+            <a href="" class="nav__link">Статьи</a>
 
-               </p>
-               <h4 class="mvv__subtitle">Знание программ</h4>
-               <p class="mvv__info">
-                  <span>- 1C</span>
-                  
-                  <span>- MS Office</span>
-               </p>
-               <h4 class="mvv__subtitle">Владение языками</h4>
-               <p class="mvv__info">
-                  <span>Русский - в совершенстве</span>
-                  
-                  <span>Туркменский - базовый</span>
-               </p>
+            <select name="interface__lang" onchange="window.location.href=this.options[this.selectedIndex].value"
+               class="nav__link">
+               <option selected disabled hidden class="header__loc__current">Язык</option>
+               <option value="" class="header__loc__current">RU</option>
+               <option value="" class="header__loc__current">TM</option>
+            </select>
 
-               <h4 class="mvv__subtitle">О себе</h4>
-               <p class="mvv__info">
-                  Разработала систему ведения учёта, снизившую налогообложение прибыли на 10-15%.
-                  Автоматизировала учёт и отчётность на базе пакета 1С:Предприятие 7.7.
-                  Навыки ведения бухгалтерского учёта (ОСНО и УСН).
-                  Опыт сдачи отчётности в налоговую инспекцию.
-                  Опыт работы с программами: 1С 7.7 Комплексная бухгалтерия, 1С 8.3 (Бухгалтерия, Зарплата, Управление торговлей, Налогоплательщик), Парус-Бухгалтерия, Консультант+, Клиент-Банк. Microsoft Office — уверенный пользователь.
-               </p>
-              
-               <a href="" class="mvv__delete__btn">Удалить</a>
-            </div>
-         </div>    
+            <a href="" class="nav__link">История поиска</a>
+
+            <a href="" class="nav__link">Условия использования и политика конфиденциальности</a>
+
+            <a href="" class="nav__link">Связаться с нами</a>
+         </div>
       </div>
-      <script src="../scripts/header.js"></script>
+      <div class="container__content">
+         <section class="my__vac__view">
+            <h1 class="mvv__headline">Моё резюме</h1>
+            <h3 class="mvv__subtitle">Максат Фархатов</h3>
+            <span class="mvv__main__info">Мужчина, 30 лет</span>
+            <span class="mvv__main__info">Стаж работы 4 года</span>
+            <span class="mvv__main__info">г. Ашхабад</span>
+            <span class="mvv__main__info">+99363223334</span>
+            <span class="mvv__main__info">maksatft@gmail.com</span>
+            <span class="mvv__main__info">Опубликовано в 16:42</span>
+            <span class="mvv__main__info">27 просмотров</span>
+            <button class="mvv__refresh__in__search__btn green__btn">Обновить в поиске</button>
+            <a href="" class="mvv__edit__btn purp__btn">Редактировать</a>
+            <h4 class="mvv__subtitle">Главный бухгалтер
+            </h4>
+            <p class="mvv__info">
+               <span>Бухгалтерия, финансы предприятия</span>
+
+               <span>График работы: Сменный график</span>
+
+               <span>Пол: не имеет значения</span>
+
+               <span>Занятость: Полная занятость</span>
+            </p>
+            <h4 class="mvv__subtitle">Опыт работы</h4>
+            <p class="mvv__info">
+               <span>Помощник бухгалтера</span>
+
+               <span>Организация ABC Holdings, г. Ашхабад</span>
+
+               <span>Март 2020 - Ноябрь 2021</span>
+            </p>
+            <h4 class="mvv__subtitle">Обязанности:</h4>
+            <p class="mvv__info">
+               Работа с первичными документами.
+               Подготовка управленческой отчетности.
+               Работа с банковскими счетами организации, которая заключается в выверке и разнесении информации по
+               бухгалтерским счетам.
+               Составление и предоставление платежных поручений в банк.
+            </p>
+            <h4 class="mvv__subtitle">Образование
+            </h4>
+            <p class="mvv__info">
+               <span>
+                  Высшее образование
+               </span>
+
+               <span>Международный Университет Гуманитарных Наук и Развития, г. Ашхабад</span>
+
+               <span>Сентябрь 2015 - Июль 2020</span>
+
+               <span>Факультет: Международная экономика</span>
+
+               <span>Специальность: Экономист</span>
+
+            </p>
+            <h4 class="mvv__subtitle">Знание программ</h4>
+            <p class="mvv__info">
+               <span>- 1C</span>
+
+               <span>- MS Office</span>
+            </p>
+            <h4 class="mvv__subtitle">Владение языками</h4>
+            <p class="mvv__info">
+               <span>Русский - в совершенстве</span>
+
+               <span>Туркменский - базовый</span>
+            </p>
+
+            <h4 class="mvv__subtitle">О себе</h4>
+            <p class="mvv__info">
+               Разработала систему ведения учёта, снизившую налогообложение прибыли на 10-15%.
+               Автоматизировала учёт и отчётность на базе пакета 1С:Предприятие 7.7.
+               Навыки ведения бухгалтерского учёта (ОСНО и УСН).
+               Опыт сдачи отчётности в налоговую инспекцию.
+               Опыт работы с программами: 1С 7.7 Комплексная бухгалтерия, 1С 8.3 (Бухгалтерия, Зарплата, Управление
+               торговлей, Налогоплательщик), Парус-Бухгалтерия, Консультант+, Клиент-Банк. Microsoft Office — уверенный
+               пользователь.
+            </p>
+
+            <a href="" class="mvv__delete__btn">Удалить</a>
+         </section>
+      </div>
+
+      <footer class="footer">
+         <div class="container__content">
+            <section class="footer__inner">
+               <div class="footer__content">
+                  <div class="footer__item">
+
+                     <img src="../src/images/header/Ishim__logo.png" alt="" class="footer__pic">
+
+                     <a href="" class="footer__text">О нас</a>
+                     <a href="" class="footer__text">Каталог компаний</a>
+                     <span href="mailto:ishim.tm@gmail.com" class="footer__text">ishim.tm@gmail.com</span>
+
+                     <div class="footer__row"></div>
+
+                     <span class="footer__text">Все права защищены</span>
+
+                  </div>
+
+                  <div class="footer__item">
+
+                     <div class="footer__social">
+                        <img src="../src/images/footer/facebook__icon.svg" alt="facebook logo"
+                           class="footer__social__pic">
+                        <img src="../src/images/footer/instagram__icon.svg" alt="instagram logo"
+                           class="footer__social__pic">
+                        <img src="../src/images/footer/imo__icon.svg" alt="imo logo" class="footer__social__pic">
+                     </div>
+
+                     <span class="footer__text">На сайте</span>
+                     <span class="footer__text">1000 вакансий</span>
+                     <span class="footer__text">2000 резюме</span>
+                     <span class="footer__text">103 компаний и</span>
+                     <span class="footer__text">работодателей</span>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </footer>
+   </div>
+   <script src="../scripts/header.js"></script>
 </body>
+
 </html>

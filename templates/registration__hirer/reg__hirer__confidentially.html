@@ -39,31 +39,31 @@
                         <h2>Имя</h2>
                         <h2>Фамилия</h2>
                      </div>
-                     <input required type="text" class="user-name" value="">
+                     <input required type="text" class="user-name" value="" name="first_name">
 
-                     <input required type="text" class="user-surname" value="">
+                     <input required type="text" class="user-surname" value="" name="last_name">
                   </div>
 
                   <div class="user-birth-date">
                      <h2>Дата рождения</h2>
-                     <input required type="tel" class="user-bd__date user-bd__item" name="user-bd__date" value=""
+                     <input required type="tel" class="user-bd__date user-bd__item" name="birth_date" value=""
                         placeholder="03">
-                     <select required name="user-bd__mon" id="" class="user-bd__item user-select-bg">
-                        <option value="Jan">Январь</option>
-                        <option value="Feb">Февраль</option>
-                        <option selected value="">Март</option>
-                        <option value="Apr">Апрель</option>
-                        <option value="May">Май</option>
-                        <option value="Jun">Июнь</option>
-                        <option value="Jul">Июль</option>
-                        <option value="Agu">Август</option>
-                        <option value="Sep">Сентябрь</option>
-                        <option value="Okt">Октябрь</option>
-                        <option value="Nov">Ноябрь</option>
-                        <option value="Dec">Декабрь</option>
+                     <select required name="birth_date" id="" class="user-bd__item user-select-bg">
+                        <option value="01">Январь</option>
+                        <option value="02">Февраль</option>
+                        <option selected value="03">Март</option>
+                        <option value="04">Апрель</option>
+                        <option value="05">Май</option>
+                        <option value="06">Июнь</option>
+                        <option value="07">Июль</option>
+                        <option value="08">Август</option>
+                        <option value="09">Сентябрь</option>
+                        <option value="10">Октябрь</option>
+                        <option value="11">Ноябрь</option>
+                        <option value="12">Декабрь</option>
                      </select>
 
-                     <select required name="user-bd__year" id="" class="user-bd__item user-select-bg">
+                     <select required name="birth_date" id="" class="user-bd__item user-select-bg">
                         <option value="2004">2004</option>
                         <option value="2003">2003</option>
                         <option selected value="2002">2002</option>
@@ -125,7 +125,7 @@
                         </div>
                      </h2>
 
-                     <input required type="tel" class="user-text" value="+993">
+                     <input required name="phone_num" type="tel" class="user-text" value="+993">
                   </div>
 
                   <div class="user-info-block">
@@ -136,8 +136,7 @@
                   <div class="user-info-block">
                      <h2>Пароль</h2>
                      <div class="user-inp-blok">
-                        <input required type="password" class="user-text" value="" name="user__password"
-                           id="user__password">
+                        <input required type="password" class="user-text" value="" name="password" id="user__password">
                         <img src="../../src/images/close__eye.svg" alt="" class="user-block-pic" id="eye__btn">
                      </div>
 
@@ -145,7 +144,7 @@
                   <div class="user-info-block">
                      <h2>Подтверждение пароля</h2>
                      <div class="user-inp-blok">
-                        <input required type="password" class="user-text" value="" name="user__password__check"
+                        <input required type="password" class="user-text" value="" name="password__check"
                            id="user__password__check">
                         <img src="../../src/images/close__eye.svg" alt="" class="user-block-pic" id="eye__btn">
                      </div>
@@ -153,27 +152,27 @@
 
                   <div class="user-info-block" id="city__wrapper">
                      <h2>Город проживания</h2>
-                     <select required name="user__city" id="user__city" class="user-text user-select-bg">
-                        <option slected value="ag">Ашхабад</option>
-                        <option value="annau">Аннау</option>
-                        <option value="baharden">Бахарден</option>
-                        <option value="bizmein">Бизмеин</option>
-                        <option value="gektepe">Гёкдепе</option>
-                        <option value="kahka">Кахка</option>
-                        <option value="tedjen">Теджен</option>
-                        <option value="balkanabad">Балканабад</option>
-                        <option value="bereket">Берекет</option>
-                        <option value="anothr__city">Другой город</option>
+                     <select required name="city" id="user__city" class="user-text user-select-bg">
+                        <option slected value="Ашхабад">Ашхабад</option>
+                        <option value="Аннау">Аннау</option>
+                        <option value="Бахарден">Бахарден</option>
+                        <option value="Бизмеин">Бизмеин</option>
+                        <option value="Гёкдепе">Гёкдепе</option>
+                        <option value="Кахка">Кахка</option>
+                        <option value="Теджен">Теджен</option>
+                        <option value="Балканабад">Балканабад</option>
+                        <option value="Берекет">Берекет</option>
+                        <option value="Другой город">Другой город</option>
                      </select>
                   </div>
 
                   <div class="user-info-block">
                      <h2>Пол</h2>
                      <div class="user-gender-block">
-                        <input required type="radio" id="man-id" value="man" name="user-gen">
+                        <input required type="radio" id="man-id" value="Мужчина" name="gender">
                         <label for="man-id" class="user-gender">Мужчина</label>
 
-                        <input required type="radio" id="woman-id" value="woman" name="user-gen">
+                        <input required type="radio" id="woman-id" value="Женщина" name="gender">
                         <label for="woman-id" class="user-gender">Женщина</label>
                      </div>
                   </div>

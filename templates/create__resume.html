@@ -22,7 +22,9 @@
                <section class="header__sec__type3">
                   <form action="">
                      <div class="nav">
-                        <img src="../src/images/search__ic.svg" alt="Sorry">
+                        <button type="submit" name="search_btn">
+                           <img src="../src/images/search__ic.svg" alt="Sorry">
+                        </button>
                         <input type="text" class="nav__inp" placeholder="Профессия, должность или ключевые слова">
                         <input type="text" class="nav__inp__small" placeholder="Профессия">
                      </div>
@@ -33,9 +35,9 @@
                </section>
 
                <section class="header__sec__type3">
-                  <a href="" class="header__user__pic">
-                     <img src="../src/images/user__def__ic.png" alt="Sorry">
-                  </a>
+                  <div class="header__user__pic__wrap">
+                     <img src="../src/images/user__def__ic.png" alt="Sorry" class="header__user__pic">
+                  </div>
                   <button class="hamburger hamburger-line">
                      <span></span>
                   </button>
@@ -172,27 +174,27 @@
                   </div>
                   <div class="user-info-block" id="user__registration__wrapper">
                      <h2>Прописка</h2>
-                     <select name="registration" id="user__registration" class="user-text user-select-bg">
-                        <option slected value="ag">Ашхабад</option>
-                        <option value="annau">Аннау</option>
-                        <option value="baharden">Бахарден</option>
-                        <option value="bizmein">Бизмеин</option>
-                        <option value="gektepe">Гёкдепе</option>
-                        <option value="kahka">Кахка</option>
-                        <option value="tedjen">Теджен</option>
-                        <option value="balkanabad">Балканабад</option>
-                        <option value="bereket">Берекет</option>
-                        <option value="anothr__city">Другой город</option>
+                     <select required name="city" id="user__registration" class="user-text user-select-bg">
+                        <option slected value="Ашхабад">Ашхабад</option>
+                        <option value="Аннау">Аннау</option>
+                        <option value="Бахарден">Бахарден</option>
+                        <option value="Бизмеин">Бизмеин</option>
+                        <option value="Гёкдепе">Гёкдепе</option>
+                        <option value="Кахка">Кахка</option>
+                        <option value="Теджен">Теджен</option>
+                        <option value="Балканабад">Балканабад</option>
+                        <option value="Берекет">Берекет</option>
+                        <option value="Другой город">Другой город</option>
                      </select>
                   </div>
 
                   <div class="user-info-block">
                      <h2>Пол</h2>
                      <div class="user-gender-block" id="gender__block__wrapper">
-                        <input required type="radio" id="man-id" value="man" name="gender">
+                        <input required type="radio" id="man-id" value="Мужчина" name="gender">
                         <label for="man-id" class="user-gender">Мужчина</label>
 
-                        <input required type="radio" id="woman-id" value="woman" name="gender">
+                        <input required type="radio" id="woman-id" value="Женщина" name="gender">
                         <label for="woman-id" class="user-gender">Женщина</label>
                      </div>
                   </div>
@@ -209,29 +211,25 @@
                   <div class="user-info-block" id="industry__wrapper">
                      <h2 class="fw500">Сфера деятельности</h2>
                      <select required name="sphere" id="user__industry" class="user-text user-select-bg">
-                        <option value="">SomeIndustry</option>
-                        <option value="">SomeIndustry</option>
-                        <option value="">SomeIndustry</option>
-                        <option value="">SomeIndustry</option>
-                        <option value="">Другое</option>
+                        <option value="IT, Дизайн">IT, Дизайн</option>
+                        <option value="Финансы, бухгалтерия">Финансы, бухгалтерия</option>
+                        <option value="Искусство, развлечения, СМИ">Искусство, развлечения, СМИ</option>
+                        <option value="Красота, спорт">Красота, спорт</option>
+                        <option value="Логистика">Логистика</option>
+                        <option value="Маркетинг, Торговля, PR, CMM">Маркетинг, Торговля, PR, CMM</option>
+                        <option value="Медицина">Медицина</option>
+                        <option value="Энергетика">Энергетика</option>
+                        <option value="Образование">Образование</option>
+                        <option value="Охрана, безопасность">Охрана, безопасность</option>
+                        <option value="Строительство">Строительство</option>
+                        <option value="Туризм">Туризм</option>
+                        <option value="Обслуживание оборудования">Обслуживание оборудования</option>
+                        <option value="Юриспруденция">Юриспруденция</option>
+                        <option value="Другое">Другое</option>
                      </select>
                   </div>
 
                   <div class="user-info-block">
-                     <!-- <h2>Зарплата</h2>
-                     <div class="user-inp-blok-salary">
-                        <div class="user-inp-blok-salary__item">
-                           <span>от</span>
-                           <input type="text" class="user-text-w45" value="">
-                           <span>ман.</span>
-                        </div>
-                        <div class="user-inp-blok-salary__row"></div>
-                        <div class="user-inp-blok-salary__item">
-                           <span>до</span>
-                           <input type="text" class="user-text-w45" value="">
-                           <span>ман.</span>
-                        </div>
-                     </div> -->
                      <h2>Зарплата</h2>
                      <div class="user-inp-blok">
                         <input required type="text" class="user-text" value="" placeholder="Укажите желаемую зарплату"
@@ -242,16 +240,16 @@
                   <div class="user-info-block">
                      <h2 class="fw500">Занятость</h2>
                      <div class="user__exp__block" id="user__busyness__wrapper">
-                        <input required type="radio" id="empl1" value="empl1" name="busyness">
+                        <input required type="radio" id="empl1" value="полная занятост" name="busyness">
                         <label for="empl1" class="user__exp__item">полная занятость</label>
 
-                        <input required type="radio" id="empl2" value="empl2" name="busyness">
+                        <input required type="radio" id="empl2" value="проектная работа" name="busyness">
                         <label for="empl2" class="user__exp__item">проектная работа</label>
 
-                        <input required type="radio" id="empl3" value="empl3" name="busyness">
+                        <input required type="radio" id="empl3" value="частная занятость" name="busyness">
                         <label for="empl3" class="user__exp__item">частная занятость</label>
 
-                        <input required type="radio" id="empl4" value="empl4" name="busyness">
+                        <input required type="radio" id="empl4" value="стажировка" name="busyness">
                         <label for="empl4" class="user__exp__item">стажировка</label>
                      </div>
                   </div>
@@ -259,16 +257,16 @@
                   <div class="user-info-block">
                      <h2 class="fw500">График работы</h2>
                      <div class="user__exp__block" id="user__schedule__wrapper">
-                        <input required type="radio" id="schedule1" value="schedule1" name="schedule">
+                        <input required type="radio" id="schedule1" value="полный рабочий день" name="schedule">
                         <label for="schedule1" class="user__exp__item">полный рабочий день</label>
 
-                        <input required type="radio" id="schedule2" value="schedule2" name="schedule">
+                        <input required type="radio" id="schedule2" value="сменный график" name="schedule">
                         <label for="schedule2" class="user__exp__item">сменный график</label>
 
-                        <input required type="radio" id="schedule3" value="schedule3" name="schedule">
+                        <input required type="radio" id="schedule3" value="гибкий график" name="schedule">
                         <label for="schedule3" class="user__exp__item">гибкий график</label>
 
-                        <input required type="radio" id="schedule4" value="schedule4" name="schedule">
+                        <input required type="radio" id="schedule4" value="удаленная работа" name="schedule">
                         <label for="schedule4" class="user__exp__item">удаленная работа</label>
                      </div>
                   </div>
@@ -347,20 +345,20 @@
 
                            <div class="user__time">
                               <h2>Окончание работы</h2>
-                              <select name="end__mon" id="user__exp__time__end__mon"
-                                 class="user__time__item user-select-bg user__time__end__mon__exp">
-                                 <option value="Jan">Январь</option>
-                                 <option value="Feb">Февраль</option>
-                                 <option selected value="">Март</option>
-                                 <option value="Apr">Апрель</option>
-                                 <option value="May">Май</option>
-                                 <option value="Jun">Июнь</option>
-                                 <option value="Jul">Июль</option>
-                                 <option value="Agu">Август</option>
-                                 <option value="Sep">Сентябрь</option>
-                                 <option value="Okt">Октябрь</option>
-                                 <option value="Nov">Ноябрь</option>
-                                 <option value="Dec">Декабрь</option>
+                              <select name="end__mon" id="user__exp__time__start__mon"
+                                 class="user__time__item user-select-bg user__time__start__mon__exp">
+                                 <option value="01">Январь</option>
+                                 <option value="02">Февраль</option>
+                                 <option selected value="03">Март</option>
+                                 <option value="04">Апрель</option>
+                                 <option value="05">Май</option>
+                                 <option value="06">Июнь</option>
+                                 <option value="07">Июль</option>
+                                 <option value="08">Август</option>
+                                 <option value="09">Сентябрь</option>
+                                 <option value="10">Октябрь</option>
+                                 <option value="11">Ноябрь</option>
+                                 <option value="12">Декабрь</option>
                               </select>
 
                               <div class="horizontal__row"></div>
@@ -424,22 +422,20 @@
                         <div class="user__educ__wrapper" id="user__educ__wrap">
                            <h2 class="fw500">Образование</h2>
                            <div class="user__exp__block" id="user__education__wrapper">
-                              <input required type="radio" id="educ1" value="educ1" name="degree">
+                              <input required type="radio" id="educ1" value="среднее" name="degree">
                               <label for="educ1" class="user__exp__item">среднее</label>
-                              <input required type="radio" id="educ2" value="educ2" name="degree">
+                              <input required type="radio" id="educ2" value="средне-специальное" name="degree">
                               <label for="educ2" class="user__exp__item">средне-специальное</label>
-                              <input required type="radio" id="educ3" value="educ3" name="degree">
+                              <input required type="radio" id="educ3" value="неоконченное высшее" name="degree">
                               <label for="educ3" class="user__exp__item">неоконченное высшее</label>
-                              <input required type="radio" id="educ4" value="educ4" name="degree">
+                              <input required type="radio" id="educ4" value="высшее" name="degree">
                               <label for="educ4" class="user__exp__item">высшее</label>
-                              <input required type="radio" id="educ5" value="educ4" name="degree">
-                              <label for="educ5" class="user__exp__item">высшее</label>
-                              <input required type="radio" id="educ6" value="educ5" name="degree">
-                              <label for="educ6" class="user__exp__item">магистр</label>
-                              <input required type="radio" id="educ7" value="educ6" name="degree">
-                              <label for="educ7" class="user__exp__item">кандидат наук</label>
-                              <input required type="radio" id="educ8" value="educ7" name="degree">
-                              <label for="educ8" class="user__exp__item">доктор наук</label>
+                              <input required type="radio" id="educ5" value="магистр" name="degree">
+                              <label for="educ5" class="user__exp__item">магистр</label>
+                              <input required type="radio" id="educ6" value="кандидат наук" name="degree">
+                              <label for="educ6" class="user__exp__item">кандидат наук</label>
+                              <input required type="radio" id="educ7" value="доктор наук" name="degree">
+                              <label for="educ7" class="user__exp__item">доктор наук</label>
                            </div>
 
 
@@ -573,11 +569,11 @@
                            <input type="text" class="user-info-block__lang__item__txt" name="lang" id="user__lang"
                               placeholder="Туркменский">
                            <select name="lang_lev" id="lang__lev" class="user-info-block__lang__item__select">
-                              <option value="ll1">Базовый</option>
-                              <option value="ll2">Продвинутый</option>
-                              <option value="ll3">Свободно</option>
-                              <option value="ll4">Совершенный</option>
-                              <option value="ll5">Профильный</option>
+                              <option value="Базовый">Базовый</option>
+                              <option value="Продвинутый">Продвинутый</option>
+                              <option value="Свободно">Свободно</option>
+                              <option value="Совершенный">Совершенный</option>
+                              <option value="Профильный">Профильный</option>
                            </select>
                         </div>
                      </div>

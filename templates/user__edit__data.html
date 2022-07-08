@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <link rel="stylesheet" href="../main.css">
-   <title>New contacts</title>
+   <title>Create vacancy</title>
 </head>
 
 <body>
@@ -28,6 +28,7 @@
                </section>
                <section class="header__sec__type3">
                   <form action="">
+
                      <div class="nav">
                         <button type="submit" name="search_btn">
                            <img src="../src/images/search__ic.svg" alt="Sorry">
@@ -75,60 +76,32 @@
          </div>
       </div>
 
-      <section class="search__history">
-         <div class="container__content">
-            <h1 class="h__fav__top__title">Уведомления об откликах</h1>
-            <div class="h__notif__item">
-               <h3 class="h__notif__item__title">Помощник Бухгалтера</h3>
-               <div class="h__notif__item__txt">У вас новые отклики</div>
-               <h2 class="suitable__link">20 откликов</h2>
+      <div class="reg-user-conf container__content">
+         <div class="reg-user-conf__inner">
+            <div class="reg-user-conf__content">
+               <h1 class="reg-user-conf__title">Изменение Данных</h1>
 
-               <a href="" class="h__notif__btn green__btn">Посмотреть все отклики</a>
+               <form action="" method="post" class="reg-user-conf__form">
+                  <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}">
+
+                  <div class="user-info-block">
+                     <h2>ForExamle Change heading</h2>
+                     <div class="user-inp-blok">
+                        <input required type="text" class="user-text" value="" placeholder="" name="some_name"
+                           id="some_name">
+                     </div>
+                  </div>
+
+
+                  <input required type="submit" class="continue__btn purp__btn mt-30" value="Изменить">
+               </form>
             </div>
          </div>
-      </section>
-
-      <footer class="footer">
-         <div class="container__content">
-            <section class="footer__inner">
-               <div class="footer__content">
-                  <div class="footer__item">
-
-                     <img src="../src/images/header/Ishim__logo.png" alt="" class="footer__pic">
-
-                     <a href="" class="footer__text">О нас</a>
-                     <a href="" class="footer__text">Каталог компаний</a>
-                     <span href="mailto:ishim.tm@gmail.com" class="footer__text">ishim.tm@gmail.com</span>
-
-                     <div class="footer__row"></div>
-
-                     <span class="footer__text">Все права защищены</span>
-
-                  </div>
-
-                  <div class="footer__item">
-
-                     <div class="footer__social">
-                        <img src="../src/images/footer/facebook__icon.svg" alt="facebook logo"
-                           class="footer__social__pic">
-                        <img src="../src/images/footer/instagram__icon.svg" alt="instagram logo"
-                           class="footer__social__pic">
-                        <img src="../src/images/footer/imo__icon.svg" alt="imo logo" class="footer__social__pic">
-                     </div>
-
-                     <span class="footer__text">На сайте</span>
-                     <span class="footer__text">1000 вакансий</span>
-                     <span class="footer__text">2000 резюме</span>
-                     <span class="footer__text">103 компаний и</span>
-                     <span class="footer__text">работодателей</span>
-
-                  </div>
-               </div>
-            </section>
-         </div>
-      </footer>
+      </div>
    </div>
    <script src="../scripts/header.js"></script>
+   <script src="../scripts/create__vac.js"></script>
+   <script src="../scripts/select_another.js"></script>
 </body>
 
 </html>

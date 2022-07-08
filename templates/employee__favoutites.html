@@ -41,7 +41,9 @@
                <section class="header__sec__type3">
                   <form action="">
                      <div class="nav">
-                        <img src="../src/images/search__ic.svg" alt="Sorry">
+                        <button type="submit" name="search_btn">
+                           <img src="../src/images/search__ic.svg" alt="Sorry">
+                        </button>
                         <input type="text" class="nav__inp" placeholder="Профессия, должность или ключевые слова">
                         <input type="text" class="nav__inp__small" placeholder="Профессия">
                      </div>
@@ -52,9 +54,9 @@
                </section>
 
                <section class="header__sec__type3">
-                  <a href="" class="header__user__pic">
-                     <img src="../src/images/user__def__ic.png" alt="Sorry">
-                  </a>
+                  <div class="header__user__pic__wrap">
+                     <img src="../src/images/user__def__ic.png" alt="Sorry" class="header__user__pic">
+                  </div>
                   <button class="hamburger hamburger-line">
                      <span></span>
                   </button>
@@ -86,15 +88,15 @@
       </div>
       <div class="container__content">
          <div class="h__fav">
-            <div class="h__fav__top">
+            <section class="h__fav__top">
                <h1 class="h__fav__top__title">Избранное</h1>
 
                <span class="h__fav__top__cat gren__color" id="vac_fav">Вакансии</span>
                <span class="h__fav__top__cat" id="articles_fav">Статьи</span>
-            </div>
+            </section>
 
             <div class="h__fav__top__row"></div>
-            <div class="vac__card__wrapper" id="fav__btn__wrapper">
+            <section class="vac__card__wrapper" id="fav__btn__wrapper">
                <div class="vacancy__card">
                   <div class="vac__card__inner">
                      <div class="vac__heading">
@@ -123,71 +125,11 @@
                      </div>
                   </div>
                </div>
+            </section>
 
 
 
-               <div class="vacancy__card">
-                  <div class="vac__card__inner">
-                     <div class="vac__heading">
-                        <h2 class="vac__heading__item">Помощник Бухгалтера</h2>
-                        <h2 class="vac__heading__item">2000 манат</h2>
-                     </div>
-                     <div class="vac__heading">
-                        <h2 class="vac__heading__item">22:04</h2>
-                        <svg width="26px" height="24px">
-                           <use xlink:href="#favorites__str" width="26px" height="24px" class="vac__ico" data-link="">
-                           </use>
-                        </svg>
-                     </div>
-                     <div class="vac__categories">
-                        <span class="vac__cat__item two-col">Бухгалтерия и управление</span>
-                        <span class="vac__cat__item">Ашхабад</span>
-                        <span class="vac__cat__item">Опыт 5 лет</span>
-                        <span class="vac__cat__item">28 лет</span>
-                        <span class="vac__cat__item">Пол мужской</span>
-                        <span class="vac__cat__item two-col">Образование среднее</span>
-                     </div>
-
-                     <div class="vac__btns">
-                        <a href="" class="vac__btns__item purp__btn" target="_blank">Подробнее</a>
-                        <a href="" class="vac__btns__item green__btn" target="_blank">Получить контакты</a>
-                     </div>
-                  </div>
-               </div>
-
-
-               <div class="vacancy__card">
-                  <div class="vac__card__inner">
-                     <div class="vac__heading">
-                        <h2 class="vac__heading__item">Помощник Бухгалтера</h2>
-                        <h2 class="vac__heading__item">2000 манат</h2>
-                     </div>
-                     <div class="vac__heading">
-                        <h2 class="vac__heading__item">22:04</h2>
-                        <svg width="26px" height="24px">
-                           <use xlink:href="#favorites__str" width="26px" height="24px" class="vac__ico" data-link="">
-                           </use>
-                        </svg>
-                     </div>
-                     <div class="vac__categories">
-                        <span class="vac__cat__item two-col">Бухгалтерия и управление</span>
-                        <span class="vac__cat__item">Ашхабад</span>
-                        <span class="vac__cat__item">Опыт 5 лет</span>
-                        <span class="vac__cat__item">28 лет</span>
-                        <span class="vac__cat__item">Пол мужской</span>
-                        <span class="vac__cat__item two-col">Образование среднее</span>
-                     </div>
-
-                     <div class="vac__btns">
-                        <a href="" class="vac__btns__item purp__btn" target="_blank">Подробнее</a>
-                        <a href="" class="vac__btns__item green__btn" target="_blank">Получить контакты</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-
-            <div class="disappear" id="fav__wrapper2">
+            <section class="disappear" id="fav__wrapper2">
                <div class="fav__article">
                   <div class="fav__article__section">
                      <img src="../src/images/article__fav__pic.png" alt="" class="fav__article__pic">
@@ -195,7 +137,9 @@
 
                   <div class="fav__article__section" id="article__btn__wrapper">
                      <div class="fav__article__section__top">
-                        <a href="" class="article__subtitle">Билл Гейтс предупредил о чем-то</a>
+                        <a href="" class="article__subtitle">Билл Гейтс
+                           предупредил
+                           о чем-то</a>
                         <svg width="19" height="24">
                            <use xlink:href="#bookmark" width="19" height="24" class="vac__ico" id="bookmarkbtn"
                               data-link=""></use>
@@ -207,14 +151,53 @@
                      </div>
                   </div>
                </div>
-
-
-            </div>
-
+            </section>
 
          </div>
       </div>
+
+      <footer class="footer">
+         <div class="container__content">
+            <section class="footer__inner">
+               <div class="footer__content">
+                  <div class="footer__item">
+
+                     <img src="../src/images/header/Ishim__logo.png" alt="" class="footer__pic">
+
+                     <a href="" class="footer__text">О нас</a>
+                     <a href="" class="footer__text">Каталог компаний</a>
+                     <span href="mailto:ishim.tm@gmail.com" class="footer__text">ishim.tm@gmail.com</span>
+
+                     <div class="footer__row"></div>
+
+                     <span class="footer__text">Все права защищены</span>
+
+                  </div>
+
+                  <div class="footer__item">
+
+                     <div class="footer__social">
+                        <img src="../src/images/footer/facebook__icon.svg" alt="facebook logo"
+                           class="footer__social__pic">
+                        <img src="../src/images/footer/instagram__icon.svg" alt="instagram logo"
+                           class="footer__social__pic">
+                        <img src="../src/images/footer/imo__icon.svg" alt="imo logo" class="footer__social__pic">
+                     </div>
+
+                     <span class="footer__text">На сайте</span>
+                     <span class="footer__text">1000 вакансий</span>
+                     <span class="footer__text">2000 резюме</span>
+                     <span class="footer__text">103 компаний и</span>
+                     <span class="footer__text">работодателей</span>
+
+                  </div>
+               </div>
+            </section>
+         </div>
+      </footer>
    </div>
+
+
    <script src="../scripts/header.js"></script>
    <script src="../scripts/favourtie.js"></script>
    <script src="../scripts/empl_fav.js"></script>

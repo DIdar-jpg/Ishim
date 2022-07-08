@@ -6,19 +6,11 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <link rel="stylesheet" href="../main.css">
-   <title>Support Page</title>
+   <link rel="stylesheet" href="../../main.css">
+   <title>RegistrationHirerCompConfidentially</title>
 </head>
 
 <body>
-   <svg display="none" fill="none">
-      <symbol id="search__pic" viewBox="0 0 22 22">
-         <path
-            d="M7.875 16.75C11.672 16.75 14.75 13.672 14.75 9.875C14.75 6.07804 11.672 3 7.875 3C4.07804 3 1 6.07804 1 9.875C1 13.672 4.07804 16.75 7.875 16.75Z"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-         <path d="M17.501 19.5001L12.7344 14.7334" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-      </symbol>
-   </svg>
    <div class="container__main pad-0 w-1920">
       <header class="header">
          <div class="container__content">
@@ -29,6 +21,7 @@
                </section>
                <section class="header__sec__type3">
                   <form action="">
+
                      <div class="nav">
                         <button type="submit" name="search_btn">
                            <img src="../src/images/search__ic.svg" alt="Sorry">
@@ -74,24 +67,32 @@
 
             <a href="" class="nav__link">Связаться с нами</a>
          </div>
-      </div>
-      <div class="container__content">
-         <div class="support">
-            <div class="support__content">
-               <img src="../src/images/write__to__us.png" alt="">
-               <h1 class="support__title">
-                  Если вы хотите задать вопрос или
-                  у вас есть предложение
-                  напишите нам!
-               </h1>
-               <a href="" class="support__btn green__btn">Написать</a>
+
+
+         <div class="reg-user-conf container__content">
+            <div class="reg-user-conf__inner">
+               <div class="reg-user-conf__content">
+                  <h1 class="reg-user-conf__title">Изменение Данных</h1>
+
+                  <form action="" class="reg-user-conf__form" method="post" enctype="multipart/form-data" id="form__id">
+                     <div class="user-info-block">
+                        <div class="user-logo-blok">
+                           <div class="user__logo__txt">Изменить лого компании</div>
+                           <input required type="file" class="user-logo" id="user__logo" value="" name="comp__logo"
+                              accept="image/jpeg,image/png">
+                           <label for="user__logo" class="user__logo__select">
+                              <span>+</span>
+                           </label>
+                        </div>
+                        <input required type="submit" class="continue__btn purp__btn" value="Изменить">
+                  </form>
+               </div>
             </div>
          </div>
       </div>
 
+      <script src="../../scripts/header.js"></script>
 
-   </div>
-   <script src="../scripts/header.js"></script>
 </body>
 
 </html>

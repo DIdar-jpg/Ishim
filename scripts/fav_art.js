@@ -1,16 +1,3 @@
-// function makeRequest(url) {
-//   const xhr = new XMLHttpRequest();
-//   xhr.open(`POST`, `https://jsonplaceholder.typicode.com/posts`);
-
-//   xhr.addEventListener("error", () => {
-//     console.log("error");
-//   });
-//   xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
-//   xhr.send(JSON.stringify());
-//   if(httpRequest.status !== 404){
-//   console.log(JSON.stringify(body));
-//   }
-// }
 
 function makeRequest(url) {
   let httpRequest = false;
