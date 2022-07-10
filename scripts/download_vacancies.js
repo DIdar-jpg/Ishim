@@ -1,5 +1,7 @@
 const result_block = document.getElementById('result__vacancy__inner');
 const get_value_btn = document.getElementById('refresh__btn__wrapper');
+let count = 0;
+
 
 get_value_btn.addEventListener("click", () => getVacancies(createVacancy(res)));
 
@@ -25,6 +27,7 @@ function getVacancies(cb) {
    xhr.open('GET' , 'someUrl');
    xhr.addEventListener('load' , () => {
       const response = JSON.parse(xhr.responseText);
+      count += response.length;
       if (response.length == 0) {
          document.querySelector(`${get_value_btn} span`).textContent = 'Вы посмотрели все вакансии'
          get_value_btn.removeChild('svg');
@@ -39,6 +42,8 @@ function getVacancies(cb) {
    if(xhr.status !== 404){
      console.log(JSON.stringify(body));
    }
+
+   return count;
 }
 function createVacancy(res) {
    res.forEach( item => {
@@ -76,6 +81,5 @@ function createVacancy(res) {
    });
    console.log(time.getFullYear());
 };
-getVacancies(createVacancy(res));
 
 

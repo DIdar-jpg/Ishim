@@ -1,5 +1,6 @@
 const result_block = document.getElementById('result__vacancy__inner');
 const get_value_btn = document.getElementById('refresh__btn__wrapper');
+let count = 0;
 
 get_value_btn.addEventListener("click", () => getVacancies(createVacancy(res)));
 
@@ -19,12 +20,13 @@ function getResumes(cb) {
    }
  
    if (!httpRequest) {
-       alert('got some err ');
+       alert('got some err');
        return false;
    }
-   xhr.open('GET' , 'someUrl');
+   xhr.open('GET' , `someurl${count}`);
    xhr.addEventListener('load' , () => {
       const response = JSON.parse(xhr.responseText);
+      count += response.length;
       if (response.length == 0) {
          document.querySelector(`${get_value_btn} span`).textContent = 'Вы посмотрели все резюме'
          get_value_btn.removeChild('svg');
@@ -39,6 +41,8 @@ function getResumes(cb) {
    if(xhr.status !== 404){
      console.log(JSON.stringify(body));
    }
+
+   return count;
 }
 function createVacancy(res) {
    res.forEach( item => {
@@ -75,6 +79,4 @@ function createVacancy(res) {
       result_block.appendChild(div);
    });
 };
-getVacancies(createVacancy(res));
-
 
