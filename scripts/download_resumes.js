@@ -2,7 +2,7 @@ const result_block = document.getElementById('result__vacancy__inner');
 const get_value_btn = document.getElementById('refresh__btn__wrapper');
 let count = 0;
 
-get_value_btn.addEventListener("click", () => getResumes(createVacancy(res)));
+get_value_btn.addEventListener("click", () => getResumes(() => createVacancy(res)));
 
 function getResumes(cb) {
    let xhr = false;

@@ -3,7 +3,7 @@ const get_value_btn = document.getElementById('refresh__btn__wrapper');
 let count = 0;
 
 
-get_value_btn.addEventListener("click", () => getVacancies(createVacancy(res)));
+get_value_btn.addEventListener("click", () => getVacancies(() => createVacancy(res)));
 
 function getVacancies(cb) {
    let xhr = false;
