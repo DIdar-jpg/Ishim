@@ -2,7 +2,7 @@ const result_block = document.getElementById('result__vacancy__inner');
 const get_value_btn = document.getElementById('refresh__btn__wrapper');
 let count = 0;
 
-get_value_btn.addEventListener("click", () => getVacancies(createVacancy(res)));
+get_value_btn.addEventListener("click", () => getResumes(createVacancy(res)));
 
 function getResumes(cb) {
    let xhr = false;
@@ -30,7 +30,7 @@ function getResumes(cb) {
       if (response.length == 0) {
          document.querySelector(`${get_value_btn} span`).textContent = 'Вы посмотрели все резюме'
          get_value_btn.removeChild('svg');
-         get_value_btn.removeEventListener("click", () => getVacancies(createVacancy(res)));
+         get_value_btn.removeEventListener("click", () => getResumes(createVacancy(res)));
       } else {
          cb(res);
       }
