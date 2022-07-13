@@ -24,7 +24,7 @@ function getVacancies(cb) {
        alert('got some err ');
        return false;
    }
-   xhr.open('GET' , 'someUrl');
+   xhr.open('GET' , `someUrl${count}`);
    xhr.addEventListener('load' , () => {
       const response = JSON.parse(xhr.responseText);
       count += response.length;
