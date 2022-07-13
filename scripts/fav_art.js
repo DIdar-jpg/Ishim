@@ -22,10 +22,6 @@ function makeRequest(url) {
   httpRequest.open('GET', url, true);
   httpRequest.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
   httpRequest.send();
-  if(httpRequest.status !== 404){
-    console.log(JSON.stringify(body));
-  }
-
 }
 
 document.getElementById("article__btn__wrapper").addEventListener("click", function (e) {

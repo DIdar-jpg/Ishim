@@ -19,7 +19,7 @@ function getResumes(cb) {
        }
    }
  
-   if (!httpRequest) {
+   if (!xhr) {
        alert('got some err');
        return false;
    }
@@ -34,13 +34,15 @@ function getResumes(cb) {
       } else {
          cb(res);
       }
+
+
+
+      if(xhr.status !== 404){
+         console.log(JSON.stringify(response));
+      }
    });
    xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
    xhr.send()
-   
-   if(xhr.status !== 404){
-     console.log(JSON.stringify(body));
-   }
 
    return count;
 }
